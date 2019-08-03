@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{mathtools}
+\begin{document}
+\scriptsize
+$\intop\nolimits_{0}^{\infty}\frac{x^s}{e^x-1}dx=\intop\nolimits_{0}^{\infty}x^s\frac{1}{e^x-1}dx=\intop\nolimits_{0}^{\infty}\frac{x^s}{e^x}\frac{1}{1-\frac{1}{e^x}}dx\quad \wedge \quad \frac{1}{1-r}=\sum_{n=0}^{\infty}r^n$
+\\$.$
+\\$\intop\nolimits_{0}^{\infty}\frac{x^s}{e^x}\sum_{n=0}^{\infty}(\frac{1}{e^x})^Ndx=\intop\nolimits_{0}^{\infty}\frac{x^s}{e^x}\sum_{n=0}^{\infty}e^{-nx}dx=\sum_{n=0}^{\infty}\intop\nolimits_{0}^{\infty}x^se^{-nx}e^{-x}dx=$
+\\$.$
+\\$\sum_{n=0}^{\infty}\intop\nolimits_{0}^{\infty}x^se^{-(N+1)x}dx\quad\wedge\quad u=(N+1)x,du=(N+1)dx \Rightarrow dx=\frac{du}{N+1}$
+\\$.$
+\\$\sum_{n=0}^{\infty}\intop\nolimits_{0}^{\infty}(\frac{u}{N+1})^se^{-u}\frac{du}{N+1}=\sum_{n=0}^{\infty}\intop\nolimits_{0}^{\infty}\frac{1}{(N+1)^{s+1}}u^se^{-u}du$
+\\$.$
+\\$\sum_{n=0}^{\infty}\frac{1}{(N+1)^{s+1}}(\intop\nolimits_{0}^{\infty}u^se^{-u}du)=(\intop\nolimits_{0}^{\infty}u^se^{-u}du)(\sum_{n=0}^{\infty}\frac{1}{(N+1)^{s+1}})=$
+\\$.$
+\\$(\intop\nolimits_{0}^{\infty}u^{(s+1)-1}e^{-u}du)(\sum_{k=1}^{\infty}\frac{1}{k^{s+1}})=\Gamma(s+1)\zeta (s+1)$
+\end{document}

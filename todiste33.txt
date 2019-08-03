@@ -1,0 +1,14 @@
+\documentclass{article}  
+\begin{document}
+$\frac{d}{dz}e^{ \pm iz}= \pm ie^{\pm iz} \Rightarrow$
+\\$\frac{d}{dz}(snz)=\frac{d}{dz}(\frac{e^{iz}-e^{-iz}}{2i})=\frac{ie^{iz}-(-i)e^{-iz}}{2i}=\frac{e^{iz}+e^{-iz}}{2}=csz$
+\\$\frac{d}{dz}(csz)=\frac{d}{dz}(\frac{e^{iz}+e^{-iz}}{2})=\frac{ie^{iz}+(-i)e^{-iz}}{2}=-\frac{e^{iz}-e^{-iz}}{2i}=-snz$
+\\\\$(x^w)'=(e^{wlnx})'=e^{wlnx}w(lnx)'=wx^w\frac{1}{x}=wx^{w-1}$
+\\ \\$cs^2z+sn^2z=(\frac{e^{iz}+e^{-iz}}{2})^2+(\frac{e^{iz}-e^{-iz}}{2})^2=\frac{e^{2iz}+2+e^{-2iz}}{4}+\frac{e^{2iz}-2+e^{-2iz}}{-4}=\frac{4}{4}=1$
+\\$csz+isnz=\frac{e^{iz}+e^{-iz}}{2}+i\frac{e^{iz}-e^{-iz}}{2i}=e^{iz}$
+\\ \\$e^{\pm \frac{i \pi}{2} }=\pm i \Rightarrow cs(z+\frac{\pi}{2})=\frac{e^{i(z+\frac{\pi}{2})}+e^{-i(z+\frac{\pi}{2})}}{2}=\frac{ie^{iz}-ie^{-iz}}{2}=-snz$
+\\ \\$-2sn\frac{z-w}{2}sn\frac{z+w}{2}=\frac{-2}{2i2i}(e^{i(z-w)/2}-e^{-i(z-w)/2})(e^{i(z+w)/2}-e^{-i(z+w)/2})=$
+\\$. \quad \quad \frac{1}{2}(e^{iz}-e^{iw}-e^{-iw}+e^{iz})=csz-csw$
+\\ \\$B(a+1,b)+B(a,b+1)= \intop_{0}^{1}(t^a(1-t)^{b-1}+t^{a-1}(1-t)^{b})dt=$
+\\$. \quad \quad \intop_{0}^{1}t^{a-1}(1-t)^{b-1}(t+(1-t))dt=B(a,b)$
+\end{document}

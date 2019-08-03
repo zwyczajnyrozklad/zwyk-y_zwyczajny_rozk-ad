@@ -1,0 +1,13 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{color}
+\begin{document}
+$L\{\frac{dF}{dt}\}=\intop\nolimits_{0}^{ \infty }e^{-st}\frac{dF}{dt}dt \quad \wedge \quad \intop\nolimits_{}^{}udv=uv-\intop\nolimits_{}^{}vdu$
+\\$=e^{-st}F(t)|^{\infty}_{0}+s\intop\nolimits_{0}^{ \infty }e^{-st}F(t)dt=sL\{F(t)\}-F(0)$
+\\ \\$L\{\frac{d^2F}{dt^2}\}=\intop\nolimits_{0}^{ \infty }e^{-st}\frac{d^2F}{dt^2}dt=e^{-st}\frac{dF}{dt}|^{\infty}_{0}+s\intop\nolimits_{0}^{ \infty }e^{-st}\frac{dF}{dt}dt=$
+\\$sL\{\frac{dF}{dt}\}-F'(0)=s^2L\{F(t)\}-sF(0)-F'(0)$
+\\ \\$L\{F^{(n)}(t)\}=\intop\nolimits_{0}^{ \infty }e^{-st}F^{(n)}(t)dt=$
+\\$s^nL\{F(t)\}-s^{n-1}F(0)-...-F^{n-1}(0)$
+\\ \\$Z\{c_1f(t)+c_2g(t)\}=\intop\nolimits_{0}^{ \infty }e^{-st}(c_1f(t)+c_2g(t))dt=$
+\\$\intop\nolimits_{0}^{ \infty }(c_1e^{-st}f(t)+c_2e^{-st}g(t))dt=c_1Z\{f(t)\}+c_2Z\{g(t)\}$
+\end{document}

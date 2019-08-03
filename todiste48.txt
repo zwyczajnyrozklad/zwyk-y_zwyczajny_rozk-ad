@@ -1,0 +1,18 @@
+\documentclass{article}  
+\usepackage{enumitem}
+\usepackage{amsmath,amsfonts,amssymb,amsthm, bm}
+\begin{document}
+\scriptsize
+$B(u,v)=\underbrace{\intop\nolimits_{0}^{1}t^{u-1}(1-t)^{v-1}dt=-\intop\nolimits_{1}^{0}(1-s)^{u-1}s^{v-1}ds}_{s=1-t,\quad t=1-s,\quad s=1-0=1,\quad s=1-1=0,\quad ds=-dt}=\intop\nolimits_{0}^{1}s^{v-1}(1-s)^{u-1}ds=B(v,u)$
+\\$.$
+\\$EX=\intop\nolimits_{0}^{1}\frac{xx^{\alpha -1}(1-x)^{\beta -1}}{B(\alpha ,\beta )}dx=\frac{1}{B(\alpha ,\beta )}\intop\nolimits_{0}^{1}x^{(\alpha+1) -1}(1-x)^{\beta -1}dx=\frac{B(\alpha +1,\beta )}{B(\alpha ,\beta )}=\frac{\Gamma (\alpha +1)\Gamma (\beta )}{\Gamma (\alpha +\beta +1)}\frac{\Gamma (\alpha +\beta )}{\Gamma (\alpha )\Gamma (\beta )}=\frac{\alpha \Gamma (\alpha)\Gamma (\beta )\Gamma (\alpha +\beta )}{(\alpha +\beta )\Gamma (\alpha +\beta)\Gamma (\alpha )\Gamma (\beta )}=\frac{\alpha }{\alpha +\beta }=\frac{1}{1+\frac{\beta }{\alpha }}$
+\\$.$
+\\$M=\frac{df(x)}{dx}=0=\frac{1}{B(\alpha ,\beta )}[(a-1)x^{a-2}(1-x)^{\beta -1}-(\beta -1)x^{\alpha -1}(1-x)^{\beta -2}]=$
+\\$=x^{a-2}(1-x)^{\beta -2}[(a-1)(1-x)-(\beta -1)x]=(a-1)-x(\alpha +\beta -2)=0$
+\\$.\quad \quad x=\frac{\alpha -1}{\alpha +\beta -2}$
+\\$.$
+\\$var(x)=E[(X-\mu)^2]=E(X^2)-EX^2=\frac{(\alpha +1)}{(\alpha +\beta +1)}\frac{a}{(\alpha +\beta )}-\frac{\alpha ^2}{(\alpha +\beta )^2}=\frac{(\alpha ^2+\alpha )(\alpha +\beta )-\alpha ^2(\alpha +\beta +1)}{(\alpha +\beta )^2(\alpha +\beta +1)}=\frac{\alpha \beta }{(\alpha +\beta )^2(\alpha +\beta +1)}$
+\\$.$
+\\$E(x^k)=\frac{1}{B(\alpha ,\beta )}\intop\nolimits_{0}^{1}x^kx^{\alpha -1}(1-x)^{\beta -1}dx=\frac{\Gamma (\alpha +k)\Gamma (\beta )}{\Gamma (\alpha +\beta +k)}\frac{1}{B(\alpha ,\beta )}=\frac{(\alpha +k-1)\Gamma (\alpha +k-1)\Gamma (\beta )}{(\alpha +\beta+k -1)\Gamma (\alpha +\beta +k-1)}\frac{1}{B(\alpha ,\beta )}=\frac{(\alpha +k-1)}{(\alpha +\beta +k-1)}\frac{B(\alpha +k-1,\beta) }{B(\alpha ,\beta )}=\frac{(\alpha +k-1)}{(\alpha +\beta +k-1)}E(x^{k-1})=\frac{(\alpha +k-1)(\alpha +k-2)...(\alpha +1)}{(\alpha +\beta +k-1)(\alpha +\beta +k-2)...(\alpha +\beta +1)}EX=$
+\\$\frac{(\alpha +k-1)(\alpha +k-2)...(\alpha +1)\alpha }{(\alpha +\beta +k-1)(\alpha +\beta +k-2)...(\alpha +\beta +1)(\alpha +\beta )}=  \sqcap^{k-1}_{n=0}\frac{(\alpha +n)}{(\alpha +\beta +n)}$
+\end{document}

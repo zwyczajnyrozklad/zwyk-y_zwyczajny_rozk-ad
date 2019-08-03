@@ -1,0 +1,19 @@
+\documentclass[letterpaper]{article}
+\usepackage{amsmath}
+\usepackage{color}
+\begin{document}
+$EX=\sum_{k=0}^{n}k\binom{n}{k}p^k(1-p)^{n-k}=np$
+\\$(p+q)^n=\sum_{k=0}^{n}\binom{n}{k}p^kq^{n-k} \quad \quad |\frac{d}{dp}$
+\\$n(p+q)^{n-1}=\sum_{k=0}^{n}k\binom{n}{k}p^{k-1}q^{n-k} \quad \quad |p$
+\\$pn(p+q)^{n-1}=\sum_{k=0}^{n}k\binom{n}{k}p^kq^{n-k} \quad  \wedge q=1-p$
+\\$np=\sum_{k=0}^{n}k\binom{n}{k}p^k(1-p)^{n-k}$
+\\
+\\
+\\$VarX=E(X^2)-(EX)^2=\sum_{k=0}^{n}k^2\binom{n}{k}p^kq^{n-k}-(np)^2=$
+\\$\sum_{k=1}^{n}k\frac{n!}{(k-1)!(n-k)!}p^kq^{n-k}-(np)^2=$
+\\$np\sum_{k=0}^{n-1}(k+1)\frac{(n-1)!}{k!(n-k-1)!}p^kq^{n-k-1}-(np)^2=$
+\\$np\sum_{k=0}^{n-1}(k+1)\binom{n-1}{k}p^kq^{n-k-1}-(np)^2=$
+\\$np((n-1)p+(p+q)^{n-1})-(np)^2=$
+\\$np(np-p+1)-(np)^2=$
+\\$np(np+q)-(np)^2=n^2p^2+npq-(np)^2=npq$
+\end{document}

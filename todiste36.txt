@@ -1,0 +1,23 @@
+\documentclass{article}
+\begin{document}
+$csh^2x-snh^2x=(\frac{e^x+e^{-x}}{2})^2-(\frac{e^x-e^{-x}}{2})^2=$
+\\$\frac{1}{4}((e^{2x}+2e^xe^{-x}+e^{-2x})-(e^{2x}-2e^xe^{-x}+e^{-2x}))=\frac{1}{4}(4e^xe^{-x})=1$
+\\
+\\$snhxcshy+cshxsnhy=\frac{e^x-e^{-x}}{2}\frac{e^y+e^{-y}}{2}+\frac{e^x+e^{-x}}{2}\frac{e^y-e^{-y}}{2}=$
+\\$\frac{1}{4}((e^{x+y}+e^{x-y}-e^{y-x}-e^{-x-y})+(e^{x+y}-e^{x-y}+e^{y-x}-e^{-x-y}))=$
+\\$\frac{1}{4}(2e^{x+y}-2e^{-(x+y)})=snh(x+y)$
+\\
+\\$cshxcshy+snhxsnhy=\frac{e^x+e^{-x}}{2}\frac{e^y+e^{-y}}{2}+\frac{e^x-e^{-x}}{2}\frac{e^y-e^{-y}}{2}=$
+\\$\frac{1}{4}((e^{x+y}+e^{x-y}+e^{y-x}+e^{-x-y})+(e^{x+y}-e^{x-y}-e^{y-x}+e^{-x-y}))=$
+\\$\frac{1}{4}(2e^{x+y}+2e^{-(x+y)})=csh(x+y)$
+\\
+\\$y=snhx$
+\\$\Leftrightarrow 2y=e^x-e^{-x}$
+\\$\Leftrightarrow 2ye^x=e^{2x}-1$
+\\$\Leftrightarrow (e^x)^2-2y(e^x)-1=0$
+\\$ \rightarrow e^x=y \pm \sqrt{y^2+1}$
+\\$\wedge  \forall x \ e^x>0$
+\\$\wedge \ \forall y \ \sqrt{y^2+1}>y$
+\\$ \rightarrow e^x=y + \sqrt{y^2+1}$
+\\$snh^{-1}x=x=ln(y+\sqrt{y^2+1})$
+\end{document}

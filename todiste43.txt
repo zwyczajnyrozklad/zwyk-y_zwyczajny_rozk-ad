@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\tiny
+\[f(x)=
+\begin{cases}
+\Gamma (a)=\intop\nolimits_{0}^{\infty}x^{a-1}e^{-x}dx
+\\0, & x < 0
+\\\frac{\lambda^a}{\Gamma(a)}x^{a-1}e^{-\lambda x}, & x \geq 0
+\end{cases}
+\]
+\scriptsize
+$\overbrace{\intop\nolimits_{0}^{\infty}\frac{\lambda^a}{ \Gamma (a)}x^{a-1}e^{-\lambda x}dx}^{y=\lambda x, dx=\frac{dy}{\lambda},x=\frac{y}{\lambda}}=\intop\nolimits_{0}^{\infty}\frac{\lambda^a}{ \Gamma (a)}(\frac{y}{\lambda})^{a-1}e^{-\lambda \frac{y}{\lambda}}\frac{dy}{\lambda}=\frac{1}{ \Gamma (a)}\intop\nolimits_{0}^{\infty}y^{a-1}e^{-y}dy=1$
+\\$K\intop\nolimits_{0}^{\infty}y^{a-1}e^{-\lambda y}dy=1 \hookleftarrow x=\lambda y \Rightarrow K=1/\intop\nolimits_{0}^{\infty}\frac{x^{a-1}}{\lambda^{a-1}}e^{-x}\frac{dx}{\lambda}=1/\frac{1}{\lambda^{a}}\intop\nolimits_{0}^{\infty}x^{a-1}e^{-x}dx=\frac{\lambda ^ a}{\Gamma (a)}$
+$E(X)=\intop\nolimits_{0}^{\infty}x\frac{\lambda^a}{\Gamma(a)}x^{a-1}e^{-\lambda x}dx=\frac{\lambda^a}{\Gamma(a)}\intop\nolimits_{0}^{\infty}x^{a}e^{-\lambda x}dx \hookleftarrow u=\lambda x\hookleftarrow \frac{\lambda^a}{ \Gamma (a)}\intop\nolimits_{0}^{\infty}(\frac{u}{\lambda})^{a}e^{-u}\frac{du}{\lambda}=$
+\\$.\quad\quad \frac{1}{ \lambda\Gamma (a)}\intop\nolimits_{0}^{\infty}u^ae^{-u}du=\frac{\Gamma (a+1)}{ \lambda\Gamma (a)}=\frac{a\Gamma (a)}{ \lambda\Gamma (a)}=\frac{a}{ \lambda}$
+\\$var(X)=\intop\nolimits_{0}^{\infty}x^2f(x)dx-EX^2=\frac{\lambda^a}{\Gamma(a)}\intop\nolimits_{0}^{\infty}x^{a+1}e^{-\lambda x}dx-(\frac{a}{\lambda})^2\hookleftarrow t=\lambda x\hookleftarrow=\frac{\lambda^a}{\Gamma(a)}\intop\nolimits_{0}^{\infty}(\frac{t}{\lambda})^{a+1}e^{-t}\frac{dt}{\lambda}-(\frac{a^2}{\lambda^2})=\frac{\lambda^a\Gamma(a+2)}{\lambda^{a+2}\Gamma(a)}-(\frac{a^2}{\lambda^2})=\frac{(a+1)a-a^2}{\lambda^2}=\frac{a}{\lambda^2}$
+\[ \Phi (x)'=( \sum_{j=a}^{\infty} \frac{(\lambda x)^j}{j!}e^{-\lambda x})'=\sum_{j=a}^{\infty}\lambda \frac{(\lambda x)^{j-1}}{(j-1)!}e^{-\lambda x}-\sum_{j=a}^{\infty}\lambda \frac{(\lambda x)^j}{j!}e^{-\lambda x}=\lambda \frac{(\lambda x)^{a-1}}{(a-1)!}e^{-\lambda x}=\frac{\lambda^a}{\Gamma(a)}x^{a-1}e^{-\lambda x}=f(x)\]
+\end{document}

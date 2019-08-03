@@ -1,0 +1,12 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{color}
+\begin{document}
+\scriptsize
+$f(x)=\frac{1}{ \sigma \sqrt{2\pi}}e^{-(\frac{x-\mu}{\sigma\sqrt{2}})^2} \Leftrightarrow N(\mu,\sigma) \hookrightarrow f(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}  \Leftrightarrow  N(0,1)$
+\\ $\Phi(x)=\intop\nolimits_{-\infty}^{x}\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{y-\mu}{\sigma})^2}dy=\frac{1}{\sigma\sqrt{2\pi}}\overbrace{\intop\nolimits_{-\infty}^{\frac{x-\mu}{\sigma}}e^{-\frac{w^2}{2}}\sigma dw}^{w=\frac{y-\mu}{\sigma}}=\frac{1}{\sqrt{2\pi}}\intop\nolimits_{-\infty}^{\frac{x-\mu}{\sigma}}e^{-\frac{w^2}{2}}dw$   
+\\$EX=\frac{1}{\sigma\sqrt{2\pi}}\intop\nolimits_{-\infty}^{\infty}xe^{-(\frac{x-\mu}{\sigma\sqrt{2}})^2}dx=\frac{\sigma\sqrt{2}}{\sigma\sqrt{2\pi}}\overbrace{\intop\nolimits_{-\infty}^{\infty}(\sqrt{2}\sigma t+\mu)e^{-t^2}dt}^{t=\frac{x-\mu}{\sigma\sqrt{2}}}=\frac{1}{\sqrt{\pi}}(\sqrt{2}\sigma\intop\nolimits_{-\infty}^{\infty}te^{-t^2}dt+\mu\intop\nolimits_{-\infty}^{\infty}e^{-t^2}dt)=\frac{1}{\sqrt{\pi}}(\sqrt{2}\sigma[-\frac{1}{2}e^{-t^2}dt]^{\infty}_{-\infty}+\mu\sqrt{\pi})=\frac{\mu\sqrt{\pi}}{\sqrt{\pi}}=\mu$
+\\$var(X)=E[(X-E[X])^2]=E[(X^2-2XE[X]+E[X]^2]=E[X^2]-2E[X]E[X]+E[X]^2=E[X^2]-E[X]^2$
+\\$var(X)=\intop\nolimits_{}^{}(x-\mu)^2f(x)dx=\intop\nolimits_{}^{}x^2f(x)dx-2\mu\intop\nolimits_{}^{}xf(x)dx+\mu^2\intop\nolimits_{}^{}f(x)dx=E[X^2]-2\mu EX+\mu^2=E[X^2]-EX^2$
+\\$var(X)=E[(X-E[X])^2]=\intop\nolimits_{-\infty}^{\infty}(x-\mu)^2f(x)dx=\overbrace{\intop\nolimits_{-\infty}^{\infty}\sigma^2 2w^2\frac{1}{\sigma\sqrt{2\pi}}e^{-w^2}\sigma \sqrt{2}dw}^{w=\frac{x-\mu}{\sigma\sqrt{2}}}=\frac{2\sigma^2}{\sqrt{\pi}}\intop\nolimits_{-\infty}^{\infty}\overbrace{w^2e^{-w^2}dw}^{u=w,v=-\frac{1}{2}e^{-w^2}}=\overbrace{\frac{2\sigma^2}{\sqrt{\pi}}([w\frac{-e^{-w^2}}{2}]^{\infty}_{-\infty}-\intop\nolimits_{-\infty}^{\infty}\frac{-e^{-w^2}}{2}dw)}^{\frac{\infty}{\infty}=\frac{\frac{1}{\infty}}{\frac{1}{\infty}}=\frac{0}{0}=\frac{(\mp w)'}{(2e^{w^2})'}=\frac{\mp 1}{4we^{w^2}}=0}=\frac{\infty^2}{\sqrt{\pi}}\intop\nolimits_{-\infty}^{\infty}e^{-w^2}dw=\sigma^2$
+\end{document}

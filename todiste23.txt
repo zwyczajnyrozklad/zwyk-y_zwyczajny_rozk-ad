@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{color}
+\newcommand{\sddots}{\raisebox{3pt}{$\scalebox{.75}{$\ddots$}$}}
+\begin{document}
+$\sqrt[n]{x}\sqrt[k]{x}=\sqrt[nk]{x^{n+k}}$
+\\$t=\sqrt[n]{x}, \quad z=\sqrt[k]{x},\quad t^n=x,\quad z^k=x ,\quad
+t^{nk}=x^k, \quad z^{nk}=x^n$ \\$(tz)^{nk}=t^{nk}z^{nk}=
+x^kx^n=x^{k+n} \Longrightarrow tz=\sqrt[nk]{x^{n+k}}$
+\\
+\\$x \geq -1 \Longrightarrow (1+x)^n \geq 1+nx$
+\\$n=1\Longrightarrow 1+x\geq 1+x \quad \bigwedge 1+x \geq 0  \bigwedge nx^2 \geq 0 \Longrightarrow$
+\\$(1+x)^{n+1}=(1+x)^n(1+x)\geq (1+nx)(1+x)=$
+\\$1+(n+1)x+nx^2 \geq 1+(n+1)x$
+\\ \\$(1+ \frac{x}{n})^n= \sum_{k=0}^{n}\binom{n}{k}\frac{x^k}{n^k}=1+ \sum_{k=1}^{n}\frac{n(n-1) \cdot  \cdot  \cdot (n-k+1)}{k!}\frac{x^k}{n^k} 
+\\=1+ \sum_{k=1}^{n}\frac{n(n-1) \cdot  \cdot  \cdot (n-k+1)}{n^k}\frac{x^k}{k!} 
+\\ \bigwedge \mathop{\forall}_{k}\lim_{n \to  \infty}
+\frac{n(n-1) \cdot  \cdot  \cdot (n-k+1)}{n^k}=1 \Longrightarrow 
+(1+ \frac{x}{n})^n=\sum_{k=0}^{n}\frac{x^k}{k!}$
+\\
+\\$\sum_{n=0}^{k} \sum_{j=0}^{n}a_jb_{n-j}= \sum_{j=0}^{k}a_j \sum_{n=j}^{k}b_{n-j}=
+\sum_{j=0}^{k}a_j \sum_{n=0}^{k-j}b_n$
+\\
+\begin{tabular}{c|c|c|c|c|c}
+ & $a_0$ & $a_1$ & $a_2$ & $a_3$ & $...$\\ \hline
+$b_0$ & $a_0b_0$ & $a_1b_0$ & $a_2b_0$ & $a_3b_0$ & $...$\\ \hline
+$b_1$ & $a_0b_1$ & $a_1b_1$ & $a_2b_1$ & $...$ & \\ \hline
+$b_2$ & $a_0b_2$ & $a_1b_2$ & \sddots &  & \\ \hline
+$b_3$ & $a_0b_3$ & \vdots &  &  & \\ \hline
+\vdots & \vdots &  &  &  & \\ \hline
+\end{tabular}
+\\ \\$c_n= \sum_{k+l=n}^{}a_kb_l=\sum_{k=0}^{n}a_kb_{n-k}=a_0n_n+a_1b_{n-1}+...+a_{n-1}b_1+a_nb_0 $
+
+\end{document}

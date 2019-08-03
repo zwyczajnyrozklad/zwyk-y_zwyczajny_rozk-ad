@@ -1,0 +1,15 @@
+\documentclass[letterpaper]{article}
+\usepackage{amsmath}
+\usepackage{color}
+\begin{document}
+$pn= \lambda   \Longrightarrow p\rightarrow 0  \Leftrightarrow P(\lambda,k)=  \lim_{n\to  \infty } \binom{n}{k}p^k(1-p)^{n-k}=$
+\\$\lim_{n\to  \infty }\binom{n}{k}(\frac{\lambda}{n})^k(1-\frac{\lambda}{n})^{n-k}=\lim_{n\to  \infty }\frac{n!}{k!(n-k)!}\frac{\lambda^k}{n^k}(1-\frac{\lambda}{n})^n(1-\frac{\lambda}{n})^{-k}=$
+\\$\frac{\lambda^k}{k!}\lim_{n\to  \infty }(1-\frac{\lambda}{n})^n=\frac{\lambda^ke^{-\lambda}}{k!} \wedge \quad (1-\frac{\lambda}{n})^{-k} \approx 1 \wedge \frac{n!}{(n-k)!n^k}=\frac{n(n-1)...(n-k+1)}{n^k}\approx 1$
+\\
+\\
+\\$EX= \sum_{k=0}^{\infty}k\frac{\lambda^ke^{-\lambda}}{k!}=e^{-\lambda}\sum_{k=1}^{\infty}k\frac{\lambda^k}{k!}=$
+\\$\lambda e^{-\lambda}\sum_{k=1}^{\infty}\frac{\lambda^{k-1}}{(k-1)!}=\lambda e^{-\lambda}\sum_{k=0}^{\infty}\frac{\lambda^k}{k!}=\lambda$
+\\
+\\
+\\$VarX=E(X^2)-(EX)^2=\sum_{k=0}^{\infty}k^2\frac{\lambda^ke^{-\lambda}}{k!}-\lambda^2=e^{-\lambda}\sum_{k=1}^{\infty}k\frac{\lambda^k}{(k-1)!}-\lambda^2=e^{-\lambda}\lambda \sum_{k=0}^{\infty}(k+1)\frac{\lambda^k}{k!}-\lambda^2=\lambda^2+\lambda-\lambda^2=\lambda$
+\end{document}

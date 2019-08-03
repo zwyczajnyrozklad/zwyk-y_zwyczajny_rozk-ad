@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{mathtools}
+\begin{document}
+$E[e^{tx}]=\underbrace{\frac{1}{2^{\frac{n}{2}}\Gamma(\frac{n}{2})}\intop\nolimits_{0}^{\infty}e^{tx}e^{-\frac{x}{2}}x^{\frac{n}{2}-1}dx=\frac{1}{2^{\frac{n}{2}}\Gamma(\frac{n}{2})}\intop\nolimits_{0}^{\infty}e^{(t-\frac{1}{2})x}x^{\frac{n}{2}-1}dx}_{y=(\frac{1-2t}{2})x,dy=\frac{1-2t}{2}dx}=$
+\\$.$
+\\$\frac{1}{2^{\frac{n}{2}}\Gamma(\frac{n}{2})}\intop\nolimits_{0}^{\infty}e^{-y}(\frac{2y}{1+2t})^{\frac{n}{2}-1}(\frac{2}{1-2t})dy=\frac{2^{\frac{n}{2}}}{(1-2t)^{\frac{n}{2}}2^{\frac{n}{2}}\Gamma(\frac{n}{2})}\intop\nolimits_{0}^{\infty}e^{-y}y^{\frac{n}{2}-1}dy=$
+\\$\frac{\Gamma(\frac{n}{2})}{\Gamma(\frac{n}{2})(1-2t)^{\frac{n}{2}}}=(1-2t)^{-\frac{n}{2}}$
+\\$.$
+\\$.$
+\\$\intop\nolimits_{0}^{\infty}\frac{1}{\sqrt{\pi}\sqrt{2}}v^{\frac{1}{2}-1}e^{-\frac{v}{2}}dv=1\quad\wedge\quad v=2x\Rightarrow dv=2dx$
+\\$\frac{1}{\sqrt{\pi}}\intop\nolimits_{0}^{\infty}\frac{2}{\sqrt{2}\sqrt{2}}x^{\frac{1}{2}-1}e^{-x}dx=1\quad\wedge\quad\Gamma(a)=\intop\nolimits_{0}^{\infty}x^{a-1}e^{-x}dx\quad\wedge\quad \Gamma(\frac{1}{2})=\sqrt{\pi}$
+\\$.$
+\\$.$
+\begin{equation}
+\Gamma(\frac{1}{2})=\intop\nolimits_{0}^{\infty}t^{-\frac{1}{2}}e^{-t}dt=
+\begin{bmatrix}
+y=\sqrt{t} \\
+2dy=t^{-\frac{1}{2}}dt \\
+t=y^2
+\end{bmatrix}=2\intop\nolimits_{0}^{\infty}e^{-y^2}dy=\sqrt{\pi}
+\end{equation}
+\end{document}

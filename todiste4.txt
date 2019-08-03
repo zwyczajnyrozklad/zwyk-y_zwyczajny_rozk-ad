@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage{subcaption}
+\begin{document}
+\scriptsize
+$\bar{z}=z^{-1}=\frac{1(cs0+isn0)}{r(cs \Theta+isn\Theta )}=\frac{1}{r}(cs(0-\Theta)+isn(0-\Theta))=\frac{1}{r}(cs\Theta-isn\Theta)$
+\\$.$
+\\$z_1z_2=r_1r_2(cs\Theta_1+isn\Theta_1)(cs\Theta_2+isn\Theta_2)=$
+\\$r_1r_2((cs\Theta_1cs\Theta_2-sn\Theta_1sn\Theta_2)+i(sn\Theta_1cs\Theta_2+cs\Theta_1sn\Theta_2))=r_1r_2[cs(\Theta_1+\Theta_2)+isn(\Theta_1+\Theta_2)]$
+\\$.$
+\\$\frac{z_1}{z_2}=\frac{r_1(cs\Theta_1+isn\Theta_1)(cs\Theta_2-isn\Theta_2)}{r_2(cs\Theta_2+isn\Theta_2)(cs\Theta_2-isn\Theta_2)}=$
+\\$\frac{r_1((cs\Theta_1cs\Theta_2+sn\Theta_1sn\Theta_2)+i(sn\Theta_1cs\Theta_2-cs\Theta_1sn\Theta_2))}{r_2(cs^2\Theta_2+isn^2\Theta_2)}=\frac{r_1}{r_2}[cs(\Theta_1-\Theta_2)+isn(\Theta_1-\Theta_2)]$
+\\$.$
+\\$e^{i\mu}=-1\rightarrow  ln(-1)=i\mu=i(2k+1)\pi,ln1=i2k\pi,lni=i(2k\pi+\frac{\pi}{2}),ln(-i)=i(2k\pi-\frac{\pi}{2})$
+\\$.$
+\\$\frac{1}{i}=-i\quad\quad\quad\quad arg(1/z)=arg(\bar{z})=-argz$
+\\$.$
+\\$a\equiv b(mod \hspace{0.1cm} m)\wedge a\equiv b(mod \hspace{0.1cm} n)\Rightarrow idm'n'=a-b=rdm'=sdn'=inww(m,n)$
+\\$.$
+\\$ln(z_1z_2)=ln|z_1z_2|+iArg(z_1+z_2)=ln|z_1|+iArg(z_1)+ln|z_2|+iArg(z_2)=ln(z_1)+ln(z_2)$
+\\$.$
+\\$ln(\frac{1}{z})=ln|\frac{1}{z}|+iArg(\frac{1}{z})=-ln|z|-iArg(z)=-lnz$
+\\$.$
+\\$n=p_1^{k_1}p_2^{k_2}...p_r^{k_r}\quad\quad T(n)=(k_1+1)(k_2+1)...(k_r+1)$
+\\$.$\\
+\begin{minipage}{.3\textwidth}
+\begin{tikzpicture}[smooth,scale=0.4]
+\draw[->] (0,0) -- (5,2) coordinate[label = {above:$\vec{a}$}];
+\draw[->] (0,0) -- (7,0.5) coordinate[label = {below:$\vec{b}$}];
+\draw[->] (0,0) -- (5.25,0.35) coordinate[label = {below:$\vec{c}$}];
+\draw[-] (5.25,0.35) -- (5,2) coordinate[below=5mm,label = {left:$\mu$}];
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{.7\textwidth}
+$\vec{c}=a\widehat{b}=|a|cs\mu=a\frac{b}{|b|}$
+\end{minipage}
+\\$.$\\$\sqrt{0}'=\frac{\sqrt{\frac{1}{\infty^2}}-\sqrt{0}}{\frac{1}{\infty^2}-0}=\infty\quad\quad\sqrt{0}'=\frac{(\sqrt{\Delta x}-\sqrt{0})(\sqrt{\Delta x}+\sqrt{0})}{\Delta x}\frac{(\sqrt{\Delta x}+\sqrt{0})}{(\sqrt{\Delta x}+\sqrt{0})}=\frac{\Delta x}{\Delta x}\frac{1}{\sqrt{\Delta x}}=\frac{1}{0}$
+\end{document}

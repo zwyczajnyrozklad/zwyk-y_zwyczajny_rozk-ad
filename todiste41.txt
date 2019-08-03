@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{tkz-euclide}
+\usepackage{verbatim}
+\usetkzobj{all}
+\begin{document}
+\scriptsize
+\[L\{\frac{df}{dt}\}=\intop\nolimits_{0}^{\infty}\frac{df}{dt}e^{-st}dt=sF(s)-f(0)
+\]\[
+\lim_{s \to \infty}\intop\nolimits_{0}^{\infty}\frac{df}{dt}\cancelto{0}{e^{-st}}dt=0=\lim_{s \to \infty}sF(s)-f(0)\Rightarrow \lim_{s \to \infty}sF(s)=f(0)
+\]\[
+\lim_{s \to 0}\intop\nolimits_{0}^{\infty}\frac{df}{dt}\cancelto{1}{e^{-st}}dt=f(\infty)-f(0)=\lim_{s \to 0}sF(s)-f(0)\Rightarrow \lim_{s \to 0}sF(s)=f(\infty)
+\]
+$(g*f)(t)=\intop\nolimits_{0}^{t}g(u)f(t-u)du \quad \quad \quad \quad t-u= \varsigma \wedge u=t-\varsigma \wedge -du=d \varsigma \\ =\intop\nolimits_{t}^{0}g(t-\varsigma)f(\varsigma)(-d\varsigma)=\intop\nolimits_{0}^{t}f(\varsigma)g(t-\varsigma)d\varsigma=(f*g)(t)$\\\\
+$F\{(f*g)(t)\}=\intop\nolimits_{-\infty}^{\infty}(\intop\nolimits_{-\infty}^{\infty}f(\tau)g(t-\tau)d\tau)e^{-iwt}dt\quad \quad \quad \quad t-\tau=\varsigma \wedge dt=d\varsigma$\\
+$\intop\nolimits_{-\infty}^{\infty}\intop\nolimits_{-\infty}^{\infty}f(\tau)g(\varsigma)e^{-iw(\tau+\varsigma)}d\tau d\varsigma=(\intop\nolimits_{-\infty}^{\infty}f(\tau)e^{-iw\tau}d\tau)(\intop\nolimits_{-\infty}^{\infty}f(\varsigma)e^{-iw\varsigma}d\varsigma)=F\{f(t)\}F\{g(t)\}$\\\\
+$L\{(f*g)(t)\}=\intop\nolimits_{0}^{\infty}\intop\nolimits_{0}^{t}f(t-u)g(u)e^{-st}dudt=$\\
+\\\\
+\begin{tikzpicture}
+\begin{axis}[xtick=\empty, ytick=\empty, width=2.6cm, height=2.6cm,  grid = major, grid style = {dashed, gray!30},  xmin = 0, xmax = 3, ymin = 0, ymax = 3,
+  title = {dudt},
+  ymin = 0, ymax = 0]
+\end{axis}
+  \draw (0,0) -- (1,1) node[below,pos=0.5,rotate=50] {$t=u$};
+  \draw (0,0) -- (0,1) node[left,pos=0.7,rotate=0] {$t$};
+  \draw (0,0) -- (1,0) node[below,pos=0.7,rotate=0] {$u$};
+  \draw (0,0.1) -- (0.1,0.1);
+  \draw (0,0.2) -- (0.2,0.2);
+  \draw (0,0.3) -- (0.3,0.3);
+  \draw (0,0.4) -- (0.4,0.4);
+  \draw (0,0.5) -- (0.5,0.5);
+  \draw (0,0.6) -- (0.6,0.6);
+  \draw (0,0.7) -- (0.7,0.7);
+  \draw (0,0.8) -- (0.8,0.8);
+  \draw (0,0.9) -- (0.9,0.9);
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[xtick=\empty, ytick=\empty, width=2.6cm, height=2.6cm,  grid = major, grid style = {dashed, gray!30},  xmin = 0, xmax = 3, ymin = 0, ymax = 3,
+  title = {dtdu},
+  ymin = 0, ymax = 0]
+\end{axis}
+  \draw (0,0) -- (1,1) node[below,pos=0.5,rotate=50] {$t=u$};
+  \draw (0,0) -- (0,1) node[left,pos=0.7,rotate=0] {$t$};
+  \draw (0,0) -- (1,0) node[below,pos=0.7,rotate=0] {$u$};
+  \draw (0.1,0.1) -- (0.1,1);
+  \draw (0.2,0.2) -- (0.2,1);
+  \draw (0.3,0.3) -- (0.3,1);
+  \draw (0.4,0.4) -- (0.4,1);
+  \draw (0.5,0.5) -- (0.5,1);
+  \draw (0.6,0.6) -- (0.6,1);
+  \draw (0.7,0.7) -- (0.7,1);
+  \draw (0.8,0.8) -- (0.8,1);
+  \draw (0.9,0.9) -- (0.9,1);
+\end{tikzpicture}
+\\\\$=\intop\nolimits_{0}^{\infty}\intop\nolimits_{u}^{\infty}f(t-u)g(u)e^{-st}dtdu=\quad \quad \quad \quad v=t-u, \quad dv=dt$\\
+$=\intop\nolimits_{0}^{\infty}\intop\nolimits_{0}^{\infty}f(v)g(u)e^{-s(v+u)}dvdu=\intop\nolimits_{0}^{\infty}f(v)e^{-sv}dv\intop\nolimits_{0}^{\infty}g(u)e^{-su}du=F(s)G(s)$
+\end{document}

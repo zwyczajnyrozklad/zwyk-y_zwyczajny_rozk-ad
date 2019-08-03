@@ -1,0 +1,17 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{color}
+\begin{document}
+$e^{i( \alpha \pm  \beta)}=
+\color{blue} cs(\alpha \pm \beta)\color{black}+ i\color{green} sn(\alpha \pm \beta)\color{black}=
+\\e^{i\alpha}e^{\pm \beta}=(cs\alpha+isn\alpha)(cs\beta \pm isn\beta)=
+\\ \color{blue}(cs\alpha cs\beta \mp sn\alpha sn\beta)\color{black}+i\color{green}(sn\alpha cs\beta \pm cs\alpha sn\beta)\color{black}
+\\  \Leftrightarrow 
+\\ \color{blue} cs(\alpha \pm \beta)=cs\alpha cs\beta \mp sn\alpha sn\beta
+\\ \color{green} sn(\alpha \pm \beta)=sn\alpha cs\beta \pm cs\alpha sn\beta$
+\\ \\
+$|x+y| \leq |x|+|y|\\$
+$|x+y|^2=(x+y)(x+y)=|x|^2+2xy+|y|^2
+\\ \leq |x|^2+2|xy|+|y|^2 
+\\ \leq |x|^2+2|x||y|+|y|^2=(|x|+|y|)^2$
+\end{document}

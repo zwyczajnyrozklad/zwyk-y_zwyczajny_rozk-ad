@@ -1,0 +1,12 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{color}
+\begin{document}
+$(a^x)'=lm_{h  \rightarrow 0}\frac{a^{x+h}-a^x}{h}=lm_{h  \rightarrow 0}\frac{a^{x}(a^h-1)}{h}=a^{x}lm_{h  \rightarrow 0}\frac{a^h-1}{h}=a^xlna$
+\\$(lg_ax)'=(\frac{lnx}{lna})'=\frac{1}{lna}(lnx)'=\frac{1}{xlna}$
+\\$(e^x)'= \sum\nolimits_{n=0}^{\infty}(\frac{x^n}{n!})'= \sum\nolimits_{n=1}^{\infty}\frac{x^{n-1}}{(n-1)!}=\sum\nolimits_{n=0}^{\infty}\frac{x^n}{n!}=e^x$
+\\$(snx)'=(\sum\nolimits_{n=0}^{\infty}(-1)^n\frac{x^{2n+1}}{(2n+1)!})'=\sum\nolimits_{n=0}^{\infty}(-1)^n\frac{(2n+1)x^{2n}}{(2n+1)!}=$
+\\ . \quad \quad $\sum\nolimits_{n=0}^{\infty}(-1)^n\frac{x^{2n}}{(2n)!}=csx$
+\\$(csx)'=(\sum\nolimits_{n=0}^{\infty}(-1)^n\frac{x^{2n}}{(2n)!})'=\sum\nolimits_{n=1}^{\infty}(-1)^n\frac{2nx^{2n-1}}{(2n)!}=\sum\nolimits_{n=1}^{\infty}(-1)^n\frac{x^{2n-1}}{(2n-1)!}=$
+\\$. \quad \quad \sum\nolimits_{n=0}^{\infty}(-1)^{n+1}\frac{x^{2n+1}}{(2n+1)!}=-\sum\nolimits_{n=0}^{\infty}(-1)^n\frac{x^{2n+1}}{(2n+1)!}=-snx$
+\end{document}

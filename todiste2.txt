@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage{subcaption}
+\begin{document}
+\scriptsize
+\begin{minipage}{0.3\textwidth}
+\begin{tikzpicture}[smooth,scale=0.4]
+\draw[-] (0,0) -- (9,0) node[below,xshift=-1cm] {$c$};
+\draw[-] (3,0) -- (3,4) node[right,yshift=-1cm] {$h$};
+\draw[-] (0,0) -- (3,4) node[left,yshift=-1cm,xshift=-1cm]
+{$b$};
+\draw[-] (0,0) -- (3,0) node[above,yshift=0.1cm,xshift=-0.5cm] {$d$};
+\draw[-] (3,0) -- (9,0) node[above,yshift=0.1cm,xshift=-1.4cm] {$c-d$};
+\draw[-] (9,0) -- (3,4) node[above,xshift=1.5cm,yshift=-0.7cm] {$a$};
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.7\textwidth}
+$b^2=h^2+d^2\wedge a^2=h^2+(c-d)^2\Rightarrow$
+\\$a^2-b^2=c^2-2cd\wedge d=\frac{-a^2+b^2+c^2}{2c}$
+\end{minipage}
+$h^2=b^2-d^2=b^2-(\frac{-a^2+b^2+c^2}{2c})^2=\frac{(2bc-a^2+b^2+c^2)(2bc+a^2-b^2-c^2)}{4c^2}=$
+\\$\frac{((b+c)^2-a^2)(a^2-(b-c)^2)}{4c^2}=\frac{(b+c-a)(b+c+a)(a+b-c)(a-b+c)}{4c^2}=$
+\\$\frac{2(s-a)2s2(s-c)2(s-b)}{4c^2}=\frac{4s(s-a)(s-b)(s-c)}{c^2}$
+\end{document}

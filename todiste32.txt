@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{color}
+\begin{document}
+$\intop\nolimits_{0}^{\infty}f(t)e^{-st}dt=L\{f(t)\}$
+\\$\intop\nolimits_{0}^{\infty}f(t)e^{-( \sigma +jw)t}dt=\intop\nolimits_{0}^{\infty}(f(t)e^{- \sigma t})e^{-jwt}dt=F\{f(t)e^{- \sigma t}\}$
+\\ \\$L\{e^{-at}\}=\intop\nolimits_{0}^{\infty}e^{-at}e^{-st}dt=\intop\nolimits_{0}^{\infty}e^{-(s+a)t}dt=-\frac{1}{s+a}e^{-(s+a)t}|^{\infty}_{0}=$
+\\$.\quad -\frac{1}{s+a}[e^{-(s+a)\infty}-1]=\frac{1}{s+a}$
+\\$L\{e^{at}\}=\intop\nolimits_{0}^{\infty}e^{at}e^{-st}dt=\intop\nolimits_{0}^{\infty}e^{-(s-a)t}dt=-\frac{1}{s-a}e^{-(s-a)t}|^{\infty}_{0}=$
+\\$.\quad -\frac{1}{s-a}[e^{-(s-a)\infty}-1]=\frac{1}{s-a}$
+\\ \\$L\{1\}=\intop\nolimits_{0}^{\infty}e^{-st}dt=-\frac{1}{s}e^{-st}|^{\infty}_{0}=\frac{1}{s}$
+\\$L\{t\}=F(s)=\intop\nolimits_{0}^{\infty}te^{-st}dt=$
+\\$\intop\nolimits udv=uv-\intop\nolimits vdu$
+\\$u=t, \quad du=dt, \quad dv=e^{-st}dt, \quad v=-\frac{1}{s}e^{-st}$
+\\$=\frac{-t}{s}e^{-st}|^{\infty}_{0}-\intop\nolimits_{0}^{\infty}-\frac{1}{s}e^{-st}dt=\frac{-t}{s}e^{-st}|^{\infty}_{0}-\frac{1}{s^2}e^{-st}|^{\infty}_{0}=0-0-0-(-\frac{1}{s^2})=\frac{1}{s^2}$
+\\$n>-1  \Rightarrow L\{t^n\}=\intop\nolimits_{0}^{\infty}e^{-st}t^ndt=\frac{1}{s^{n+1}}\intop\nolimits_{0}^{\infty}e^{-st}(st)^nd(st)=\frac{n!}{s^{n+1}}$
+\\ \\$L\{cswt\}=\frac{1}{2}L\{e^{iwt}\}+\frac{1}{2}L\{e^{-iwt}\}=\frac{1}{2}\frac{1}{s-iw}+\frac{1}{2}\frac{1}{s+iw}=\frac{s}{s^2+w^2}$
+\\$L\{snwt\}=\frac{1}{2i}L\{e^{iwt}\}-\frac{1}{2i}L\{e^{-iwt}\}=\frac{1}{2i}\frac{1}{s-iw}-\frac{1}{2}\frac{1}{s+iw}=\frac{w}{s^2+w^2}$
+\\ \\$L\{cshkt\}=\frac{1}{2}L\{e^{kt}+e^{-kt}\}=\frac{1}{2}(\frac{1}{s-k}+\frac{1}{s+k})=\frac{s}{s^2-k^2}$
+\\$L\{snhkt\}=\frac{1}{2}L\{e^{kt}-e^{-kt}\}=\frac{1}{2}(\frac{1}{s-k}-\frac{1}{s+k})=\frac{k}{s^2-k^2}$
+\end{document}

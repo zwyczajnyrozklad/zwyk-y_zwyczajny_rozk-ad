@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{cancel}
+\begin{document}
+\scriptsize
+$e^{-at}snwt=e^{-at}\frac{e^{jwt}-e^{-jwt}}{2j}=\frac{e^{(jw-a)t}-e^{-(jw+a)t}}{2j} \wedge e^{at}snwt=\frac{e^{(jw+a)t}-e^{-(jw-a)t}}{2j}\Rightarrow$
+\\$F(s)=\frac{1}{2j}(\frac{1}{s-(jw\mp a)}-\frac{1}{s+(jw\pm a)})=\frac{1}{2j}(\frac{1}{s\pm a -jw}-\frac{1}{s\pm a +jw})=\frac{1}{2j}(\frac{[(s\pm a)+jw]-[(s \pm a)-jw]}{(s\pm a)^2-(jw)^2})=$
+\\$. \quad\quad\quad\quad \frac{w}{(s\pm a)^2+w^2}=L\{e^{\pm at}snwt\}$
+\\ \\$f(t)=t^n \wedge n\geq 1  \Rightarrow F(s)=\intop\nolimits_{0}^{\infty}e^{-st}t^ndt=t^n\frac{e^{-st}}{-s}|^{\infty}_{0}-\intop\nolimits_{0}^{\infty}\frac{nt^{n-1}e^{-st}}{-s}dt=0+\frac{n}{s}\intop\nolimits_{0}^{\infty}e^{-st}t^{n-1}dt=$
+\\$. \quad\quad\quad\quad \frac{n}{s}L\{t^{n-1}\}=L\{t^n\}=\frac{n(n-1)}{s^2}...\frac{1}{s}L\{1\}=\frac{n!}{s^{n+1}} $
+\\ \\$L\{e^{at}f(t)\}=\intop\nolimits_{0}^{\infty}e^{-st}e^{at}f(t)dt=\intop\nolimits_{0}^{\infty}e^{-(s-a)t}f(t)dt=F(s-a)$
+\\ \\$F'(s)=\frac{d}{ds}\intop\nolimits_{0}^{\infty}e^{-st}f(t)dt=\intop\nolimits_{0}^{\infty}(-t)e^{-st}f(t)dt=L\{-tf(t)\}$
+\\ \\$G(t)=\intop\nolimits_{0}^{t}g \Rightarrow G'(t)=g(t) \wedge L\{G'(t)\}=sL\{G(t)\}-G(0)=sL\{G(t)\}\Rightarrow L\{\intop\nolimits_{0}^{t}g\}=\frac{1}{s}L\{g(t)\}$
+\\ \\$L\{\frac{f(t)}{t}\}=\intop\nolimits_{s}^{\infty}F \wedge F(s)=L\{f(t)\} \Rightarrow \intop\nolimits_{s}^{\infty}F(u)du=\intop\nolimits_{s}^{\infty}[\intop\nolimits_{0}^{\infty}e^{-ut}f(t)dt]du=\intop\nolimits_{0}^{\infty}f(t)[\intop\nolimits_{s}^{\infty}e^{-ut}du]dt=$
+\\$. \quad\quad\quad\quad \intop\nolimits_{0}^{\infty}e^{-st}\frac{f(t)}{t}dt=L\{\frac{f(t)}{t}\}$
+\[f(t)=
+\begin{cases}
+k, & 0 \leq t < c 
+\\0, & c \leq t
+\end{cases}
+\]
+$L\{f(t)\}=\intop\nolimits_{0}^{\infty}e^{-st}f(t)dt=\intop\nolimits_{0}^{c}ke^{-st}dt=-\frac{k}{s}[e^{-st}]^{c}_{0}=\frac{k}{s}[1-e^{-sc}]$
+\\ \\$u(t)=\intop\nolimits_{0}^{t}f(r)dr \Rightarrow u'(t)=f(t) \wedge$ \\$L\{\intop\nolimits_{0}^{t}f(r)dr\}=\intop\nolimits_{0}^{\infty}u(t)e^{-st}dt=\intop\nolimits_{0}^{\infty}u(t)v'(t)dt=[(\intop\nolimits_{0}^{t}f(r)dr)(-\frac{1}{s}e^{-st})]^{\infty}_{0}-\intop\nolimits_{0}^{\infty}f(t)(-\frac{1}{s}e^{-st})dt=-\frac{1}{s}[e^{-st}\intop\nolimits_{0}^{t}f(r)dr]^{\infty}_{0}+\frac{1}{s}F(s) \wedge L\{f(t)\}=F(s)=-\frac{1}{s}(e^{-s\infty}\cancel{\intop\nolimits_{0}^{\infty}f(r)dr}-e^{-s*0}\cancel{\intop\nolimits_{0}^{0}f(r)dr})+\frac{1}{s}F(s)=\frac{1}{s}L\{f(t)\}$
+\end{document}

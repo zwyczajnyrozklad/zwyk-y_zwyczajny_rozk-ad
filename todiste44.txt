@@ -1,0 +1,11 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{color}
+\begin{document}
+$E(X)=\intop\nolimits_{0}^{\infty}x\lambda e^{-\lambda x}dx=\overbrace{\frac{1}{\lambda}\intop\nolimits_{0}^{\infty}(\lambda x)e^{-\lambda x}d(\lambda x)}^{y=\lambda x}=$\\
+$\frac{1}{\lambda}\intop\nolimits_{0}^{\infty}ye^{-y}dy=\overbrace{\frac{1}{\lambda}[-ye^{-y}|^{\infty}_{0}+\intop\nolimits_{0}^{\infty}e^{-y}dy]}^{u=y,v=-e^{-y}}=\frac{1}{\lambda}[0+(-e^{-y}|^{\infty}_{0})]=\frac{1}{\lambda}$\\
+$E(X^2)=\intop\nolimits_{0}^{\infty}x^2\lambda e^{-\lambda x}dx=\overbrace{\frac{1}{\lambda^2}\intop\nolimits_{0}^{\infty}(\lambda x)^2e^{-\lambda x}d(\lambda x)}^{y=\lambda x}=$
+\\$\frac{1}{\lambda^2}\intop\nolimits_{0}^{\infty}y^2e^{-y}dy=\overbrace{\frac{1}{\lambda^2}[-y^2e^{-y}|^{\infty}_{0}+\intop\nolimits_{0}^{\infty}2ye^{-y}dy]}^{u=y^2,v=-e^{-y}}=\overbrace{\frac{1}{\lambda^2}[0+2(-ye^{-y}|^{\infty}_{0}+\intop\nolimits_{0}^{\infty}e^{-y}dy)]}^{u=y,v=-e^{-y}}=\frac{2}{\lambda^2}[0+(-e^{-y}|^{\infty}_{0})]=\frac{2}{\lambda^2}$\\
+$V(X)=E(X^2)-[E(X)]^2=\frac{2}{\lambda^2}-(\frac{1}{\lambda})^2=\frac{1}{\lambda^2}$\\
+$F(X)=\intop\nolimits_{0}^{x}\lambda e^{-\lambda y}dy=-e^{-\lambda y}|^{x}_{0}=1-e^{-\lambda x}$
+\end{document}

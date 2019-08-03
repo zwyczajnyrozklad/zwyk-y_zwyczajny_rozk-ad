@@ -1,0 +1,17 @@
+\documentclass{article}  
+\begin{document}
+$IFT\{\frac{1}{2\pi}\intop\nolimits_{-\infty}^{\infty}X_1(\lambda)X_2(w-\lambda)d\lambda\}=\frac{1}{2\pi}\intop\nolimits_{-\infty}^{\infty}\hspace{0.2cm}\frac{1}{2\pi}\intop\nolimits_{-\infty}^{\infty}X_1(\lambda)X_2(w-\lambda)d\lambda\hspace{0.2cm} e^{jwt}dw\frac{e^{j\lambda t}}{e^{j\lambda t}}=$
+\\$\underbrace{(\frac{1}{2\pi})^2\hspace{0.2cm}\intop\nolimits_{-\infty}^{\infty}X_1(\lambda)e^{j\lambda t}d\lambda\hspace{0.2cm}\intop\nolimits_{-\infty}^{\infty}X_2(w-\lambda) e^{j(w-\lambda)t}dw=}_{w-\lambda=\beta \Rightarrow dw=d\beta ,w\rightarrow -\infty\Rightarrow \beta \rightarrow -\infty ,w\rightarrow \infty\Rightarrow \beta \rightarrow \infty }\frac{1}{2\pi}\intop\nolimits_{-\infty}^{\infty}X_1(\lambda)e^{j\lambda t}d\lambda\hspace{0.2cm}\frac{1}{2\pi}\intop\nolimits_{-\infty}^{\infty}X_2(\beta) e^{j\beta t}d\beta=f_1(t)f_2(t)$
+\\$.$
+\\$X(w)=\intop\nolimits_{-\infty}^{\infty}x(t)e^{-jwt}dt$
+\\$x(t)=\frac{1}{2\pi}\intop\nolimits_{-\infty}^{\infty}X(w)e^{jwt}dw$
+\\$.$
+\\$FT\{f_1(t)f_2(t)\}=\frac{1}{2\pi}\intop\nolimits_{-\infty}^{\infty}X_1(\lambda)X_2(w-\lambda)d\lambda$
+\\$.$
+\\$x(t)'=\frac{d}{dt}(\frac{1}{2\pi}\intop\nolimits_{-\infty}^{\infty}X(jw)e^{jwt}dw)=jwX(jw)\Rightarrow \frac{d^kx(t)}{dt^k}=IFT\{(jw)^kX(jw)\}$
+\\$.$
+\\$X(jw)=\intop\nolimits_{-\infty}^{\infty}x(t)e^{-jwt}dt$
+\\$\frac{dX(jw)}{dw}=-j\intop\nolimits_{-\infty}^{\infty}tx(t)e^{-jwt}dt$
+\\$j\frac{dX(jw)}{dw}=\intop\nolimits_{-\infty}^{\infty}tx(t)e^{-jwt}dt$
+\\$FT\{t^nx(t)\}=j^n\frac{d^nX(jw)}{dw^n}$
+\end{document}

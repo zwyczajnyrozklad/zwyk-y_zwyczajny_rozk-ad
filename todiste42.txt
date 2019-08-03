@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{tkz-euclide}
+\usepackage{verbatim}
+\usetkzobj{all}
+\begin{document}
+\scriptsize
+\[\frac{d}{dx}snx=\lim_{h \to 0}\frac{sn(x+h)-snx}{h}=\lim_{h \to 0}\frac{snxcsh+snhcsx-snx}{h}=\lim_{h \to 0}[\frac{snx(csh-1)}{h}+\frac{snhcsx}{h}]=
+\]
+\[=\lim_{h \to 0}[snx\cancelto{0}{\frac{csh-1}{h}}]+\lim_{h \to 0}[csx\cancelto{1}{\frac{snh}{h}}]=csx
+\]
+\[\frac{d}{dx}csx=\lim_{h \to 0}\frac{cs(x+h)-csx}{h}=\lim_{h \to 0}\frac{csxcsh-snxsnh-csx}{h}=\lim_{h \to 0}[\frac{csx(csh-1)}{h}-\frac{snxsnh}{h}]=
+\]
+\[=\lim_{h \to 0}[csx\cancelto{0}{\frac{csh-1}{h}}]-\lim_{h \to 0}[snx\cancelto{1}{\frac{snh}{h}}]=-snx
+\]
+\[\frac{d}{dx}tnx=\frac{d}{dx}\frac{snx}{csx}=\frac{csxcsx-snx(-snx)}{cs^2x}=\frac{1}{cs^2x}=sc^2x
+\]
+\[\frac{d}{dx}ctx=\frac{d}{dx}\frac{csx}{snx}=\frac{snx(-snx)-csxcsx}{sn^2x}=\frac{-1}{sn^2x}=-csc^2x
+\]
+\[\frac{d}{dx}scx=\frac{d}{dx}\frac{1}{csx}=\frac{\cancelto{0}{csx*0}-1(-snx)}{cs^2x}=snxsc^2x=tnxscx
+\]
+\[\frac{d}{dx}cscx=\frac{d}{dx}\frac{1}{snx}=\frac{\cancelto{0}{snx*0}-1(csx)}{sn^2x}=-csxcsc^2x=-ctxcscx
+\]
+\end{document}

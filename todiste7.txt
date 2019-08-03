@@ -1,0 +1,25 @@
+\documentclass{article}  
+\usepackage{enumitem}
+\begin{document}
+$f(x)=a_0+\sum_{n=1}^{\infty}a_ncs(nx)+b_nsn(nx)\quad\quad |cs(mx)\intop\nolimits_{-\pi}^{\pi}\quad|sn(mx)\intop\nolimits_{-\pi}^{\pi}$
+\\$.$
+\\$\intop\nolimits_{-\pi}^{\pi}f(x)dx=\intop\nolimits_{-\pi}^{\pi}a_0dx+\sum_{n=1}^{\infty}(a_n\intop\nolimits_{-\pi}^{\pi}cs(nx)dx+b_n\intop\nolimits_{-\pi}^{\pi}sn(nx)dx$
+\\$.$
+\\$\intop\nolimits_{-\pi}^{\pi}cs(nx)dx=\frac{sn(nx)}{n}|^{\pi}_{-\pi}=0,\quad \intop\nolimits_{-\pi}^{\pi}sn(nx)dx=\frac{-cs(nx)}{n}|^{\pi}_{-\pi}=0$
+\\$.$
+\\$\intop\nolimits_{-\pi}^{\pi}f(x)dx=2\pi a_0,\quad a_0=\frac{1}{2\pi}\intop\nolimits_{-\pi}^{\pi}f(x)dx$
+\\$.$
+\\$\intop\nolimits_{-\pi}^{\pi}f(x)cs(mx)dx=\intop\nolimits_{-\pi}^{\pi}a_0cs(mx)dx+\sum_{n=1}^{\infty}(a_n\intop\nolimits_{-\pi}^{\pi}cs(nx)cs(mx)dx+b_n\intop\nolimits_{-\pi}^{\pi}sn(nx)cs(mx)dx$
+\\$.$
+\\$a_0\intop\nolimits_{-\pi}^{\pi}cs(mx)dx=\frac{a_0sn(mx)}{m}|^{\pi}_{-\pi}=0,\quad m\neq n \Rightarrow $
+\\$.$
+\\$a_n\intop\nolimits_{-\pi}^{\pi}cs(nx)cs(mx)dx=\frac{1}{2}\intop\nolimits_{-\pi}^{\pi}(cs((n+m)x)+cs((n-m)x))dx$
+\\$.$
+\\$b_n\intop\nolimits_{-\pi}^{\pi}sn(nx)cs(mx)dx=\frac{1}{2}\intop\nolimits_{-\pi}^{\pi}(sn((n+m)x)+sn((n-m)x))dx$
+\\$.$
+\\$\frac{1}{2}\intop\nolimits_{-\pi}^{\pi}(cs((n+m)x)+cs((n-m)x))dx=0$
+\\$.$
+\\$\frac{1}{2}\intop\nolimits_{-\pi}^{\pi}(sn((n+m)x)+sn((n-m)x))dx=0,\quad m=n\Rightarrow $
+\\$.$
+\\$a_m\intop\nolimits_{-\pi}^{\pi}cs^2(mx)dx=\pi a_m, \quad a_m=\frac{1}{\pi}\intop\nolimits_{-\pi}^{\pi}f(x)cs(mx)dx,\quad b_m=\frac{1}{\pi}\intop\nolimits_{-\pi}^{\pi}f(x)sn(mx)dx$
+\end{document}

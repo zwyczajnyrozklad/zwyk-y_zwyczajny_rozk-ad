@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{mathtools}
+\begin{document}
+\scriptsize
+$n!=\sqrt{2\pi n}(\frac{n}{e})^n$
+\\$\Gamma(n+1)\intop\nolimits_{0}^{\infty}x^ne^{-x}dx=\intop\nolimits_{0}^{\infty}e^{nlnx-x}dx\stackrel{x=n+y}{=}$
+\\$\intop\nolimits_{-n}^{\infty}e^{nln(n+y)-n-y}dy=e^{-n}\intop\nolimits_{-n}^{\infty}e^{nln(n+y)-y}dy$
+\\$(\frac{n}{e})^n\intop\nolimits_{-n}^{\infty}e^{nln(1+\frac{y}{n})-y}dy$
+\\$ln(1+u)=u-\frac{u^2}{2}+\frac{u^3}{3}-...$
+\\$ln(1+\frac{y}{n})=\frac{y}{n}-\frac{y^2}{2n^2}+\frac{y^3}{3n^3}-...$
+\\$(\frac{n}{e})^n\intop\nolimits_{-n}^{\infty}e^{-\frac{y^2}{2n}+\frac{y^3}{3n^2}-...}dy\stackrel{y=v\sqrt{n}}{=}$
+\\$(\frac{n}{e})^n\sqrt{n}\intop\nolimits_{-\sqrt{n}}^{\infty}e^{-\frac{v^2}{2}+\frac{v^3}{3\sqrt{n}}-...}dy\stackrel{n\uparrow}{\approx}$
+\\$(\frac{n}{e})^n\sqrt{2\pi n} $
+\end{document}

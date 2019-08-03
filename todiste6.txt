@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\usepackage{subcaption}
+\begin{document}
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+\begin{minipage}{.2\textwidth}
+\begin{tikzpicture}[smooth,scale=0.4]
+\begin{axis}[every axis plot post/.append style={
+  mark=none,domain=-3:3,samples=50,smooth},
+  axis x line*=bottom,
+  axis y line*=left,
+  enlargelimits=upper]
+  \addplot {gauss(0,1)};
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{.7\textwidth}
+\centering
+$ f(x)=e^{-x^2}, \quad I=\intop\nolimits_{-\infty}^{\infty}e^{-x^2}dx$
+\\$I^2=\intop\nolimits_{}^{}e^{-x^2}dx\intop\nolimits_{}^{}e^{-y^2}dy=\intop\nolimits_{}^{}\intop\nolimits_{}^{}e^{-(x+y)^2}dxdy$
+\\$=\intop\nolimits_{0}^{\infty}e^{-r^2}\color{red}2\color{black}\pi \color{red}rdr\quad \color{green} \updownarrow e^{-r^2} \longleftrightarrow 2\pi r \nearrow dr$
+\\$\color{blue}u=r^2,\frac{du}{dr}=2r,du=\color{red}2rdr$
+\\$\color{black}=\pi\intop\nolimits_{0}^{\infty}e^{-u}du=\pi[-e^{-u}]^{\infty}_{0}=\pi$
+\\$I=\intop\nolimits_{}^{}e^{-x^2}dx=\sqrt{\pi}$
+\end{minipage}
+\begin{minipage}{.1\textwidth}
+\begin{tikzpicture}[smooth,scale=0.8]
+\draw (2,2) circle (0.1cm);
+\draw (2,2) circle (0.2cm);
+\draw (2,2) circle (0.3cm);
+\draw (2,2) circle (0.4cm);
+\draw (2,2) circle (0.5cm);
+\draw (2,2) circle (0.6cm);
+\draw (2,2) circle (0.7cm);
+\draw (2,2) circle (0.8cm);
+\draw (2,2) circle (0.9cm);
+\draw (2,2) circle (1cm);
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{1\textwidth}
+\centering
+$.$\\$.$
+\\$(\frac{1}{\sqrt{a}}\intop\nolimits_{}^{}e^{\frac{-\pi t^2}{a}}dt)^2=$
+\\$\frac{1}{a}(\intop\nolimits_{}^{}e^{\frac{-\pi u^2}{a}}du)(\intop\nolimits_{}^{}e^{\frac{-\pi v^2}{a}}dv)=\frac{1}{a}\intop\nolimits_{}^{}\intop\nolimits_{}^{}e^{\frac{-\pi (u^2+v^2)}{a}}dudv$
+\\$=\frac{1}{a}\intop\nolimits_{0}^{\infty}e^{\frac{-\pi r^2}{a}}\color{red}2\color{black}\pi \color{red}rdr\quad \color{green} \updownarrow e^{-r^2} \longleftrightarrow 2\pi r \nearrow dr$
+\\$\color{blue}u=r^2,\frac{du}{dr}=2r,du=\color{red}2rdr$
+\\$\color{black}=\frac{\pi}{a}\intop\nolimits_{0}^{\infty}e^{\frac{-\pi u}{a}}du=-\frac{\pi}{a}\frac{a}{\pi}[-e^{\frac{-\pi u}{a}}du]^{\infty}_{0}=1$
+\\$\intop\nolimits_{}^{}\frac{1}{\sqrt{a}}e^{\frac{-\pi t^2}{a}}dt=1$
+\end{minipage}
+\end{document}

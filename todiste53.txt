@@ -1,0 +1,12 @@
+\documentclass{article}  
+\begin{document}
+\scriptsize
+$\underbrace{a>0\Rightarrow \intop\nolimits_{-\infty}^{\infty}f(at)e^{-jwt}dt}_{at=\zeta ,t=\frac{\zeta }{a},dt=\frac{d\zeta }{a}}=\intop\nolimits_{-\infty}^{\infty}f(\zeta )e^{-jw\frac{\zeta }{a}}\frac{d\zeta }{a}=\frac{1}{a}\intop\nolimits_{-\infty}^{\infty}f(\zeta )e^{-j\frac{w}{a}\zeta }d\zeta =\frac{1}{a}X(j\frac{w}{a})$
+\\$\underbrace{a<0\Rightarrow \intop\nolimits_{-\infty}^{\infty}f(-at)e^{-jwt}dt=\frac{1}{a}\intop\nolimits_{-\infty}^{\infty}f(\zeta )e^{-j\frac{w}{-a}\zeta }d\zeta}_{-at=\zeta ,t=-\frac{\zeta }{a},dt=-\frac{d\zeta }{a},\quad-a\infty =-\infty=\zeta ,-a(-\infty )=\infty}\Rightarrow \intop\nolimits_{-\infty}^{\infty}f(at)e^{-jwt}dt=\frac{1}{|a|}\intop\nolimits_{-\infty}^{\infty}f(\zeta )e^{-j\frac{w}{a}\zeta }d\zeta$
+\\$.$
+\\$.$
+\\$\underbrace{\intop\nolimits_{-\infty}^{\infty}f(t\pm t_0)e^{-jwt}dt=\intop\nolimits_{-\infty}^{\infty}f(\zeta )e^{-jw(\zeta \mp t_0)}d\zeta}_{t\pm t_0=\zeta \Rightarrow t=\zeta \mp t_0,\quad dt=d\zeta }=e^{\pm jwt_0}\intop\nolimits_{-\infty}^{\infty}f(\zeta )e^{-jw\zeta }d\zeta =e^{\pm jwt_0}X(jw)$
+\\$.$
+\\$.$
+\\$\intop\nolimits_{-\infty}^{\infty}e^{\pm jw_0t}f(t)e^{-jwt}dt=\intop\nolimits_{-\infty}^{\infty}e^{-j(w\mp w_0)t}dt=X(j(w\mp w_0))$
+\end{document}

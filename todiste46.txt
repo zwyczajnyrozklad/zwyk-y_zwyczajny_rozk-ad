@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{graphicx}
+\usepackage{color}
+\newcommand{\bn}[1]{{\fontseries{b}\selectfont#1}}
+
+\begin{document}
+    \begin{tabular}{c|c|c}
+    \bn{?} & \bn{0/0} & $\bn{\infty/\infty}$\\ \hline
+        0/0 &  & $\frac{0_1}{0_2}=\frac{1/0_2}{1/0_1}$\\
+        \hline
+        $\infty/\infty$ & $\infty_1/\infty_2=\frac{1/\infty_2}{1/\infty_1}$ & \\
+        \hline
+        $0\infty$ & $0\infty=\frac{0}{1/\infty}$ & $0\infty=\frac{\infty}{1/0}$\\
+        \hline
+        $\infty-\infty$ & $\infty_1-\infty_2=\frac{\frac{1}{\infty_2}-\frac{1}{\infty_1}}{1/\infty_1\infty_2}$ & $\infty_1-\infty_2=ln\frac{e^{\infty_1}}{e^{\infty_2}}$\\
+        \hline
+        $0^0$ & $0_1^{0^2}=e^{\frac{0_2}{1/ln0_1}}$ &  $0_1^{0^2}=e^{\frac{ln0_1}{1/0_2}}$\\
+        \hline
+        $1^\infty$ & $1^{\infty}=e^{\frac{ln1}{1/ln\infty}}$ &  $1^{\infty}=e^{\frac{\infty}{1/ln1}}$\\
+        \hline
+        $\infty^0$ & $\infty^0=e^{\frac{0}{1/ln\infty}}$ &  $\infty^0=e^{\frac{ln\infty}{1/0}}$\\
+    \end{tabular}
+\end{document}

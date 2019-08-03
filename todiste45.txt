@@ -1,0 +1,17 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{color}
+\begin{document}
+\[f(t)=
+\begin{cases}
+0, & x < a
+\\\frac{1}{b-a}, & a \leq x \leq b 
+\\0, & x > b
+\end{cases}
+\]
+$F(x)=\intop\nolimits_{a}^{x}\frac{dt}{b-a}=\frac{x-a}{b-a}$
+\\$EX=\intop\nolimits_{a}^{b}x\frac{1}{b-a}dx=\frac{a+b}{2}$
+\\$VarX=\intop\nolimits_{a}^{b}x^2\frac{1}{b-a}dx-(EX)^2=$
+\\$\frac{b^3-a^3}{3(b-a)}-(\frac{a+b}{2})^2=$
+\\$\frac{4(a^2+ab+b^2)}{12}-\frac{3a^2+6ab+3b^2}{12}=\frac{(b-a)^2}{12}$
+\end{document}

@@ -1,0 +1,36 @@
+\documentclass{article}  
+\usepackage{enumitem}
+\usepackage{amsmath,amsfonts,amssymb,amsthm, bm}
+\begin{document}
+\scriptsize
+$\overbrace{ \Gamma(u)\Gamma(v)=\intop\nolimits_{0}^{\infty}e^{-t}t^{u-1}dt\intop\nolimits_{0}^{\infty}e^{-s}t^{v-1}ds=\intop\nolimits_{0}^{\infty}\intop\nolimits_{0}^{\infty}e^{-(t+s)}t^{u-1}s^{v-1}dtds=}^{t=xy \wedge s=x(1-y) \Rightarrow t+s=x,0<t<\infty,0<s<\infty \Rightarrow 0<x<\infty \wedge 0<y<1}$
+\begin{equation}
+J=
+\begin{bmatrix}
+y&x\\
+1-y&-x
+\end{bmatrix} =-xy-x+xy=-x
+\end{equation}
+$\Gamma(u)\Gamma(v)=\overbrace{\intop\nolimits_{0}^{1}\intop\nolimits_{0}^{\infty}e^{-x}x^{u-1}y^{u-1}x^{v-1}(1-y)^{v-1}xdxdy}^{x>0 \Rightarrow dt ds=J dx dy=x dx dy}=$
+\\$\intop\nolimits_{0}^{\infty}e^{-x}x^{u+v-1}dx\intop\nolimits_{0}^{1}y^{u-1}(1-y)^{v-1}dy=\Gamma(u+v)B(u,v)$
+\\$.$
+\\$.$
+\\$\Gamma(x)\Gamma(y)=\intop\nolimits_{0}^{\infty}u^{x-1}e^{-u}du\intop\nolimits_{0}^{\infty}v^{y-1}e^{-v}dv=\underbrace{\intop\nolimits_{0}^{\infty}\intop\nolimits_{0}^{\infty}u^{x-1}v^{y-1}e^{-u-v}dudv}_{u= \varsigma cs^2(\varphi), \quad v= \varsigma sn^2(\varphi)  }=$
+\begin{equation}
+J=
+\begin{bmatrix}
+cs^2(\varphi)&-2\varsigma cs(\varphi) sn(\varphi)\\
+sn^2(\varphi)&2\varsigma cs(\varphi) sn(\varphi)
+\end{bmatrix}=2\varsigma sn(\varphi)cs(\varphi)
+\end{equation}
+$=2\intop\nolimits_{0}^{\infty}\intop\nolimits_{0}^{\pi /2}e^{-\varsigma}\varsigma^{x+y-1}cs(\varphi)^{2x-1}sn(\varphi)^{2y-1}d\varsigma d\varphi=$
+\\$2\intop\nolimits_{0}^{\infty}e^{-\varsigma}\varsigma^{x+y-1} d\varsigma \intop\nolimits_{0}^{\pi /2}cs(\varphi)^{2x-1}sn(\varphi)^{2y-1}d\varphi=$
+\begin{equation}
+J=
+\begin{bmatrix}
+cs^2(\varphi)=t\\
+dt=2 sn(\varphi)cs(\varphi)d\varphi
+\end{bmatrix}
+\end{equation}
+$=\Gamma(x+y)\intop\nolimits_{0}^{1}t^{x-1}(1-t)^{y-1}dt=\Gamma(x+y)B(x,y)$
+\end{document}

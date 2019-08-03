@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{cancel}
+\begin{document}
+\scriptsize
+$f(t)=snwt \wedge F(s)=\frac{w}{s^2+w^2}\Rightarrow L\{tsnwt\}=-F'(s)=\frac{2ws}{(s^2+w^2)^2}$
+\\\\$f(t)=e^{at}\Rightarrow F(s)=\frac{1}{s-a}$
+\\$L\{te^{at}\}= -F'(s)=\frac{1}{(s-a)^2}$
+\\$L\{t^2e^{at}\}=F''(s)=\frac{2}{(s-a)^3}$
+\\$L\{t^3e^{at}\}=-F'''(s)=\frac{3*2}{(s-a)^4}$
+\\$L\{t^ne^{at}\}=(-1)^nF^{(n)}(s)=\frac{n!}{(s-a)^{n+1}}$
+\\\\$L\{u(t-a)f(t-a)\}=\intop\nolimits_{0}^{\infty}u(t-a)f(t-a)e^{-st}dt=$
+\\$\intop\nolimits_{a}^{\infty}f(t-a)e^{-st}dt \quad (t<a \Rightarrow u(t-a)=0)$
+\\$=\intop\nolimits_{0}^{\infty}f( \tau )e^{-s(\tau +a)}d\tau \quad (\tau =t-a)$
+\\$=e^{-as}\intop\nolimits_{0}^{\infty}f( \tau )e^{-s\tau}d\tau=e^{-as}F(s)$
+\\\\$g(t)=f(t+a) \Rightarrow f(t)=g(t-a) \wedge L\{g\}=L\{f(t+a)\}$
+\\$L\{u(t-a)f(t)\}=L\{u(t-a)g(t-a)\}=e^{-as}L\{g\}=e^{-as}L\{f(t+a)\}$
+\end{document}

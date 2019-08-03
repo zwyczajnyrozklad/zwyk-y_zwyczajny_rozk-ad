@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{cancel}
+\begin{document}
+\scriptsize
+\[\epsilon \rightarrow 0 \wedge \delta(t-a)=
+\begin{cases}
+\frac{1}{\epsilon}, & a \leq t \leq a+\epsilon 
+\\0
+\end{cases}
+\]
+\[\intop\nolimits_{0}^{\infty}\delta(t-a)dt=\lim_{\epsilon \to 0}\intop\nolimits_{a}^{a+\epsilon}\frac{1}{\epsilon }dt=\lim_{\epsilon \to 0}\frac{1}{\epsilon }[t]^{a+\epsilon}_{a}=\frac{1}{\epsilon }(\cancel{a}+\epsilon -\cancel{a})=1 \]
+\[\intop\nolimits_{0}^{\infty}f(t)\delta(t-a)dt=\lim_{\epsilon \to 0}\intop\nolimits_{a}^{a+\epsilon}\frac{1}{\epsilon }f(t)dt=\lim_{\epsilon \to 0}\frac{\frac{d}{d\epsilon}\intop\nolimits_{a}^{a+\epsilon}f(t)dt}{\frac{d}{d\epsilon}\epsilon }=\lim_{\epsilon \to 0}\frac{f(a+\epsilon)-0}{1}=f(a) \]
+\[L\{\delta(t-a)\}=\intop\nolimits_{0}^{\infty}e^{-pt}\delta(t-a)dt=\lim_{\epsilon \to 0}\intop\nolimits_{a}^{a+\epsilon}e^{-pt}\frac{1}{\epsilon }dt=\lim_{\epsilon \to 0}\frac{\frac{d}{d\epsilon}\intop\nolimits_{a}^{a+\epsilon}e^{-pt}dt}{\frac{d}{d\epsilon}\epsilon }=\lim_{\epsilon \to 0}e^{-p(a+\epsilon)}-0=e^{-ap} \]
+\end{document}

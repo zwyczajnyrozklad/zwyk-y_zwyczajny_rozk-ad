@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{titlesec}
+\usepackage{amsmath}
+\begin{document}
+$sn(nx)=\frac{e^{inx}-e^{-inx}}{2i}=\frac{(csx+isnx)^{n}-(csx-isnx)^{n}}{2i}=$
+\\$\sum_{k=0}^{n}\binom{n}{k}\frac{csx^k(isnx)^{n-k}-csx^k(-isnx)^{n-k}}{2i}=$
+\\$\sum_{k=0}^{n}\binom{n}{k}csx^ksn^{n-k}\frac{i^{n-k}-(-i)^{n-k}}{2i}=$
+\\$\sum_{k=0}^{n}\binom{n}{k}csx^ksn^{n-k}sn\frac{(n-k)\pi}{2} \wedge $
+\\$e^{i\frac{\pi}{2}}=cs(\frac{\pi}{2})+isn(\frac{\pi}{2})=i$
+\\$\frac{(e^{i\frac{\pi}{2}})^{n-k}-(e^{-i\frac{\pi}{2}})^{n-k}}{2i}=$
+\\$\frac{cs\frac{\pi(n-k)}{2}+isn\frac{\pi(n-k)}{2}-cs\frac{\pi(n-k)}{2}+isn\frac{\pi(n-k)}{2}}{2i}=$
+\\$sn\frac{\pi(n-k)}{2}$
+\\
+\\$lna=\lim_{x \to 0}\frac{a^x-1}{x}$
+\\$a^x-1=\frac{1}{z}, \quad a^x=\frac{1}{z}+1$
+\\$xlna=ln(1+\frac{1}{z})$
+\\$\frac{1}{x}=\frac{lna}{ln(1+\frac{1}{z})}$
+\\$\frac{a^x-1}{x}=\frac{lna}{z*ln(1+\frac{1}{z})}=\frac{lna}{ln(1+\frac{1}{z})^z}$
+\\$\lim_{x \to 0} \Longrightarrow z=\frac{1}{a^x-1}=\infty \Longrightarrow$
+\\$\lim_{x \to 0}\frac{a^x-1}{x}=lna$
+\\
+\\$lg_ax'=lm_{ \Delta x \to 0}\frac{lg_a(x+\Delta x)-lg_ax}{\Delta x}=lm_{ \Delta x \to 0}lg(\frac{x+\Delta x}{x})^{\frac{1}{\Delta x}}=$
+\\$lm_{ \Delta x \to 0}\frac{1}{x}lg(1+\frac{\Delta x}{x})^{\frac{x}{\Delta x}}=\frac{1}{x}lg_ae=\frac{1}{xlna}$
+
+\end{document}

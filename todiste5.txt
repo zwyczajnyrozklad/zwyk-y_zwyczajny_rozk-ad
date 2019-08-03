@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage{tkz-euclide}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usetkzobj{all}
+\begin{document}
+\scriptsize
+\begin{minipage}{.4\textwidth}
+\begin{tikzpicture}[smooth,scale=0.3]
+\rotatebox{-75,2}{
+\begin{scope}[yshift=90pt,xshift=-120pt]
+\draw[-] (0,1) -- (4.4,1);
+\end{scope}
+}
+\node (qq1) at (6,3) {$|\vec{w}|sn \Upsilon$};
+\node (qq2) at (1,0.7) {$\Upsilon$};
+\draw[-] (0,0) -- (12,0)node[pos=0.4,below] {$a$}node[pos=0.9,below] {$c$};
+\draw[-] (0,7) -- (12,7)node[pos=0.1,above] {$c$}node[pos=0.6,above] {$a$};;
+\draw[-] (0,0) -- (0,7) node[pos=0.3,left] {$d$}node[pos=0.8,left] {$b$};
+\draw[-] (12,0) -- (12,7)node[pos=0.1,right] {$b$}node[pos=0.8,right] {$d$};
+\draw[-] (0,0) -- (9,2)node[pos=0.7,below] {$\vec{v}$};
+\draw[-] (12,7) -- (3,5)node[pos=0.7,below] {$\vec{v}$};
+\draw[-] (0,0) -- (3,5)node[pos=0.7,left] {$\vec{w}$};
+\draw[-] (12,7) -- (9,2)node[pos=0.7,right] {$\vec{w}$};
+\draw[-] (3,5) -- (3,7);
+\draw[-] (3,5) -- (0,5);
+\draw[-] (9,2) -- (12,2);
+\draw[-] (9,2) -- (9,0);
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{.6\textwidth}
+\begin{equation}
+\begin{bmatrix}
+a & b \\
+c & d 
+\end{bmatrix}=ad-bc=|w||v|sn\Upsilon
+\end{equation}
+\centering
+$a_1\quad a_2\quad a_3$
+\\$b_1\quad b_2\quad b_3$
+\\$c_1\quad c_2\quad c_3$
+\\$.$
+\\$a_1c_1+a_2c_2+a_3c_3=0$
+\\$b_1c_1+b_2c_2+b_3c_3=0$
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+$a_1b_1c_1+a_2b_1c_2+a_3b_1c_3=0$
+\\$a_1b_1c_1+a_1b_2c_2+a_1b_3c_3=0$
+\\$.$
+\\$c_2(a_2b_1-a_1b_2)=c_3(a_1b_3-a_3b_1)$
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+$a_1b_3c_1+a_2b_3c_2+a_3b_3c_3=0$
+\\$a_3b_1c_1+a_3b_2c_2+a_3b_3c_3=0$
+\\$.$
+\\$c_1(a_1b_3-a_3b_1)=c_2(a_3b_2-a_2b_3)$
+\end{minipage}
+$.$\\$.$\\
+$\frac{c_1}{a_3b_2-a_2b_3}=\frac{c_2}{a_1b_3-a_3b_1}=\frac{c_3}{a_2b_1-a_1b_2}=k$
+\\$.$
+\\$a_3=b_3=0\Rightarrow c_3=k(a_2b_1-a_1b_2)\wedge c_3=a_1b_2-a_2b_1\Rightarrow k=-1$
+\end{document}

@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\usepackage{subcaption}
+\begin{document}
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))^2}%
+}
+\begin{minipage}{0.2\textwidth}
+\begin{tikzpicture}[smooth,scale=0.4]
+\begin{axis}[
+  legend pos=north east,
+  legend entries={$Y=X^2$}][every axis plot post/.append style={
+  mark=none,domain=-3:3,samples=50,smooth},
+  axis x line*=bottom,
+  axis y line*=left,
+  enlargelimits=upper]
+  \addplot {gauss(0,1)};
+\end{axis}
+\draw[-,thick,green] (2.3,0) -- (2.3,0.6);
+\draw[-,thick,green] (4.5,0) -- (4.5,0.6);
+\node (qq1) at (1,-1) {$-\sqrt{y}$};
+\node (qq2) at (5,-1) {$\sqrt{y}$};
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.8\textwidth}
+\centering
+$P(x^2\leq y)=P(-\sqrt{y}\leq x\leq \sqrt{y})=$
+\\$\Phi (\sqrt{y})-\Phi (-\sqrt{y})=\Phi (\sqrt{y})-(1-\Phi (\sqrt{y}))=$
+\\$2\Phi (\sqrt{y})-1$
+\\$.$
+\\$\frac{d}{dy}P(x^2\leq y)=2\Phi(\sqrt{y})'\sqrt{y}'-0=$
+\\$2\frac{d}{dy}(\intop\nolimits_{-\infty}^{\sqrt{y}}\frac{1}{\sqrt{2\pi}}e^{\frac{-t^2}{2}}dt)=\frac{2}{\sqrt{2\pi}}e^{\frac{-y}{2}}(\frac{1}{2}y^{\frac{-1}{2}})=$
+\\$\frac{y^{-\frac{1}{2}}e^{-\frac{y}{2}}}{2^{\frac{1}{2}}\Gamma(\frac{1}{2})},\quad x> 0$
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\centering
+$EX=\frac{1}{2^{\frac{n}{2}}\Gamma(\frac{n}{2})}\intop\nolimits_{0}^{\infty}xe^{-\frac{x}{2}}x^{\frac{n}{2}-1}dx=$
+\\$\frac{1}{2^{\frac{n}{2}}\Gamma(\frac{n}{2})}\intop\nolimits_{0}^{\infty}e^{-\frac{x}{2}}x^{\frac{n}{2}}dx=$
+\\$\frac{[(\frac{e^{-\frac{x}{2}}}{-\frac{1}{2}}x^{\frac{n}{2}})|^{\infty}_{0}+2\intop\nolimits_{0}^{\infty}e^{-\frac{x}{2}}\frac{n}{2}x^{\frac{n}{2}-1}dx]}{2^{\frac{n}{2}}\Gamma(\frac{n}{2})}=$
+\\$\frac{n[(e^{-\infty}\infty-0e^0)+2^{\frac{n}{2}}\Gamma(\frac{n}{2})\intop\nolimits_{0}^{\infty}f(x)dx]}{2^{\frac{n}{2}}\Gamma(\frac{n}{2})}=n$
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\centering
+$E(X^2)=\intop\nolimits_{0}^{\infty}\frac{x^2}{2^{\frac{n}{2}}\Gamma(\frac{n}{2})}e^{-\frac{x}{2}}x^{\frac{n}{2}-1}dx=$
+\\$\frac{1}{2^{\frac{n}{2}}\Gamma(\frac{n}{2})}\intop\nolimits_{0}^{\infty}e^{-\frac{x}{2}}x^{\frac{n}{2}+1}dx=$
+\\$\frac{[(\frac{e^{-\frac{x}{2}}}{-\frac{1}{2}}x^{\frac{n}{2}+1})|^{\infty}_{0}+2\intop\nolimits_{0}^{\infty}e^{-\frac{x}{2}}(\frac{n}{2}+1)x^{\frac{n}{2}}dx]}{2^{\frac{n}{2}}\Gamma(\frac{n}{2})}=$
+\\$\frac{[(\frac{2e^{-\frac{x}{2}}}{-\frac{1}{2}}(\frac{n}{2}+1)x^{\frac{n}{2}})|^{\infty}_{0}+4\intop\nolimits_{0}^{\infty}e^{-\frac{x}{2}}\frac{n}{2}(\frac{n}{2}+1)x^{\frac{n}{2}-1}dx]}{2^{\frac{n}{2}}\Gamma(\frac{n}{2})}=$
+\\$\frac{1}{2^{\frac{n}{2}}\Gamma(\frac{n}{2})}(e^{-\infty}\infty-0e^0)+n^2+2n=n^2+2n$
+\end{minipage}
+$var(x)=n^2+2n-n^2=2n$
+\end{document}

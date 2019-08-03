@@ -1,0 +1,17 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{mathtools}
+\begin{document}
+\scriptsize
+$P_n=n!\quad \quad P(A)=\frac{\bar{\bar{A}}}{\bar{\bar{\Omega }}} $
+\\$.$\\$\bar{V_n^k}=n^k\quad\quad V^k_n=\frac{n!}{(n-k)!}$
+\\$.$\\$C^k_n=\frac{n!}{k!(n-k)!}\quad\quad \bar{C^k_n}=\frac{(k+n-1)!}{k!(n-1)!}$
+\\$.$\\$a^x=b\quad\quad log_ab=x$
+\\$.$\\$a^y=c\quad\quad log_ac=y$
+\\$.$\\$a^m=\frac{b}{c}=\frac{a^x}{a^y}=a^{x-y}\quad\quad log_a(\frac{b}{c})=m=x-y=log_ab-log_ac$
+\\$.$\\$a^n=bc=a^xa^y=a^{x+y}\quad\quad log_a(bc)=n=x+y=log_ab+log_ac$
+\\$.$\\$b^k=(a^x)^k=a^{xk}\quad\quad log_a(b^k)=xk=klog_ab$
+\\$.$\\$b^z=c\quad\quad log_bc=z$
+\\$.$\\$a^y=(a^x)^z=a^{xz}\quad\quad log_ay=xz=log_ab*log_bc$
+\end{document}

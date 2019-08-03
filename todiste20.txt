@@ -1,0 +1,45 @@
+\documentclass[fleqn]{article}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{mathtools}
+\begin{document}
+\scriptsize
+$S=\sum_{k=0}^{n}\binom{n}{k}k\quad\wedge\quad \binom{n}{k}=\binom{n}{n-k}$
+\\$.$
+\\$2S=\sum_{k=0}^{n}\binom{n}{k}k+\sum_{k=0}^{n}\binom{n}{k}(n-k)=\sum_{k=0}^{n}\binom{n}{k}n= n\sum_{k=0}^{n}\binom{n}{k}=n(1+1)^n=n2^n$
+\\$.$
+\begin{equation}
+\begin{bmatrix}
+cs\alpha &-sn\alpha \\
+sn\alpha &cs\alpha 
+\end{bmatrix}
+\begin{bmatrix}
+cs\beta  &-sn\beta  \\
+sn\beta  &cs\beta  
+\end{bmatrix}=
+\begin{bmatrix}
+cs\alpha cs\beta -sn\alpha sn\beta  &-cs\alpha sn\beta -sn\alpha cs\beta  \\
+sn\alpha cs\beta +cs\alpha sn\beta  &-sn\alpha sn\beta +cs\alpha cs\beta 
+\end{bmatrix}=
+\end{equation}
+\begin{equation}
+\begin{bmatrix}
+cs(\alpha+\beta) &-sn(\alpha+\beta ) \\
+sn(\alpha+\beta) &cs(\alpha +\beta )
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+\begin{bmatrix}
+cs\alpha &-sn\alpha \\
+sn\alpha &cs\alpha 
+\end{bmatrix}^{-1}=
+\begin{bmatrix}
+cs(-\alpha) &-sn(-\alpha) \\
+sn(-\alpha) &cs(-\alpha) 
+\end{bmatrix}=
+\begin{bmatrix}
+cs\alpha &sn\alpha \\
+-sn\alpha &cs\alpha 
+\end{bmatrix}
+\end{equation}
+\end{document}

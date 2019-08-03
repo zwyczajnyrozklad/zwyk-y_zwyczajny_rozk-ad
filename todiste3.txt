@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\scriptsize
+$\intop\nolimits_{-\infty}^{\infty}e^{\frac{-t^2}{2}}dt=\sqrt{2\pi}\quad\quad\quad\quad\frac{1}{z}=\frac{\bar{z}}{\bar{z}z}=\frac{\bar{z}}{|z|^2}=\frac{x-iy}{x^2+y^2}\quad\quad\quad\quad I_n=nI_{n-1}=n!$
+\[
+I_n=\intop\nolimits_{0}^{\infty}e^{-t}t^ndt,n=0,1,2,...
+\quad I_0=\intop\nolimits_{0}^{\infty}e^{-t}dt=[-e^{-t}]^{\infty}_{0}=\lim_{r \rightarrow \infty}(-e^{-\infty}-(-1))=1
+\]
+$r\rightarrow \infty\Rightarrow I_n=\intop\nolimits_{0}^{r}e^{-t}t^ndt=[-e^{-t}t^n]^r_0+n\intop\nolimits_{0}^{r}e^{-t}t^{n-1}dt=-e^{-r}r^n+n\intop\nolimits_{0}^{r}e^{-t}t^{n-1}dt=nI_{n-1}\wedge e^{-r}r^n\rightarrow 0$
+\\$.$
+\\$e^{-r}r^n=\frac{r^n}{e^r}\leq\frac{r^n}{\frac{r^{n+1}}{(n+1)!}}=\frac{(n+1)!}{r}<e^r=1+r+\frac{r^2}{2!}+...\geq\frac{r^{n+1}}{(n+1)!}$
+\\$.$
+\\$ln(z)=ln(|z|e^{i\varphi})=ln|z|+iArg_\varphi(z)=ln|z|+i(\phi-\pi +Arg_\varphi(-ze^{i(-\phi)}))=$
+\\$ln|-ze^{-i\phi}|+i(\phi-\pi +Arg_\varphi(-ze^{-i\phi}))=i(\phi-\pi)+ln(-ze^{-i\phi}) $
+\\$.$
+\\$ln(z)'=0+\frac{-e^{-i\phi}}{-ze^{-i\phi}}=\frac{1}{z}
+$
+\end{document}

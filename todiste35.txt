@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{tkz-euclide}
+\usepackage{verbatim}
+\usetkzobj{all}
+\begin{document}
+\scriptsize
+\[(f(x)+g(x))'=\lim_{h  \rightarrow 0}\frac{f(x+h)+g(x+h)-f(x)-g(x)}{h}=\lim_{h  \rightarrow 0}\frac{f(x+h)-f(x)}{h}+\lim_{h  \rightarrow 0}\frac{g(x+h)-g(x)}{h}=f'(x)+g'(x)
+\]
+\[(f(x)-g(x))'=\lim_{h  \rightarrow 0}\frac{f(x+h)-g(x+h)-f(x)+g(x)}{h}=\lim_{h  \rightarrow 0}\frac{f(x+h)-f(x)}{h}-\lim_{h  \rightarrow 0}\frac{g(x+h)-g(x)}{h}=f'(x)-g'(x)
+\]
+\[cf(x)'=\lim_{h  \rightarrow 0}\frac{cf(x+h)-cf(x)}{h}=c\lim_{h  \rightarrow 0}\frac{f(x+h)-f(x)}{h}=cf'(x)
+\]
+\[(x^n)'=\lim_{a \rightarrow x}\frac{x^n-a^n}{x-a}=\lim_{a \rightarrow x}\frac{(x-a)\overbrace{(x^{n-1}+ax^{n-2}+...+a^{n-2}x+a^{n-1})}^{n}}{x-a}=nx^{n-1}
+\]
+\[(x^n)'=\lim_{h \rightarrow 0}\frac{(x+h)^n-x^n}{h}=\lim_{h \rightarrow 0}\frac{(x^n+nx^{n-1}h+\frac{n(n-1)}{2!}x^{n-2}h^2+...+nxh^{n-1}+h^n)}{h}=nx^{n-1}
+\]
+\[(fg)'=\lim_{h \rightarrow 0}\frac{f(x+h)g(x+h)-f(x+h)g(x)+f(x+h)g(x)-f(x)g(x)}{h}=
+\]
+\[=\lim_{h \rightarrow 0}f(x+h)\frac{g(x+h)-g(x)}{h}+\lim_{h \rightarrow 0}g(x)\frac{f(x+h)-f(x)}{h}=f(x)g'(x)+f'(x)g(x)
+\]
+\[ln(f(x)g(x))'=\frac{(f(x)g(x))'}{f(x)g(x)}=ln(f(x))+ln(g(x))=\frac{f(x)'}{f(x)}+\frac{g(x)'}{g(x)} \Rightarrow
+\]
+\[(f(x)g(x))'=(f(x)g(x))(\frac{f(x)'}{f(x)}+\frac{g(x)'}{g(x)})=f(x)g'(x)+f'(x)g(x)
+\]
+\[(\frac{f}{g})'=\lim_{h \rightarrow 0}\frac{\frac{f(x+h)}{g(x+h)}-\frac{f(x)}{g(x)}}{h}=\lim_{h \rightarrow 0}\frac{1}{h}\frac{f(x+h)g(x)-f(x)g(x)+f(x)g(x)-f(x)g(x+h)}{g(x+h)g(x)}=\frac{f'g-fg'}{g^2}
+\]
+\end{document}

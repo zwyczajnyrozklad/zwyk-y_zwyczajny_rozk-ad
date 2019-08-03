@@ -1,0 +1,19 @@
+\documentclass{article}  
+\begin{document}
+$cswt=\frac{1}{2}[e^{jwt}+e^{-jwt}]$
+\\$F\{x(t)cswt\}=\frac{1}{2}[F\{x(t)e^{jwt}\}+F\{x(t)e^{-jwt}\}]$
+\\$snwt=\frac{1}{2}[e^{jwt}-e^{-jwt}]$
+\\$F\{x(t)snwt\}=\frac{1}{2}[F\{x(t)e^{jwt}\}-F\{x(t)e^{-jwt}\}]$
+\\$.$
+\\$F\{\lambda f(t)+\beta g(t)\}=\intop\nolimits_{-\infty}^{\infty}[\lambda f(t)+\beta g(t)]e^{-jwt}dt=\lambda\intop\nolimits_{-\infty}^{\infty}f(t)e^{-jwt}dt+ \beta\intop\nolimits_{-\infty}^{\infty}g(t)e^{-jwt}dt=\lambda  F\{f(t)\}+\beta F\{g(t)\}$
+\\$.$
+\\$X^*(-jw)=\intop\nolimits_{-\infty}^{\infty}x^*(t)e^{-jwt}dt=F\{x^*(t)\}$
+\\$.$
+\\$\intop\nolimits_{-\infty}^{\infty}f(t)dt=\intop\nolimits_{-\infty}^{\infty}f(t)dte^{-j0t}dt=X(0)$
+\\$.$
+\\$f(0)=\frac{1}{2\pi}\intop\nolimits_{-\infty}^{\infty}X(jw)e^{jw0}dw=\frac{1}{2\pi}\intop\nolimits_{-\infty}^{\infty}X(jw)dw$
+\\$.$
+\\$X(jw)=\intop\nolimits_{-\infty}^{\infty}f(t)e^{-jwt}dt$
+\\$\underbrace{\intop\nolimits_{-\infty}^{\infty}f(-t)e^{-jwt}dt=-\intop\nolimits_{\infty}^{-\infty}f(t)e^{jw\zeta }d\zeta }_{-t=\zeta,t=-\zeta ,dt=-d\zeta ,t=-\infty\Rightarrow \zeta =\infty,t=\infty\Rightarrow \zeta =-\infty  }$
+\\$\intop\nolimits_{-\infty}^{\infty}f(t)e^{-j(-w)\zeta }d\zeta =X(-jw)$
+\end{document}
